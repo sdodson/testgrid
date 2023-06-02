@@ -1,0 +1,54 @@
+{{define "matrix"}}
+
+<!DOCTYPE html>
+<html>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.success {
+  background-color: rgb(122, 190, 122);
+}
+
+.failure {
+  background-color: rgb(241, 149, 149);
+}
+
+</style>
+<body>
+
+<h2>Test Matrix</h2>
+
+<table>
+  <tr>
+    <th>Variant</th>
+    <th>Upgrade from current</th>
+    <th>Upgrade from previous</th>
+    <th>Serial</th>
+    <th>Parallel</th>
+    <th>CSI</th>
+  </tr>
+  {{ range $key, $value := . }}
+  <tr>
+    <td>{{$key}}</td>
+    <td{{if eq $value.UpgradeFromCurrent.Result "success"}} class="success"{{else if eq $value.UpgradeFromCurrent.Result "failure"}} class="failure"{{end}}><a href="{{$value.UpgradeFromCurrent.URL}}">{{$value.UpgradeFromCurrent.Result}}</a></td>
+    <td{{if eq $value.UpgradeFromPrevious.Result "success"}} class="success"{{else if eq $value.UpgradeFromPrevious.Result "failure"}} class="failure"{{end}}><a href="{{$value.UpgradeFromPrevious.URL}}">{{$value.UpgradeFromPrevious.Result}}</a></td>
+    <td{{if eq $value.Serial.Result "success"}} class="success"{{else if eq $value.Serial.Result "failure"}} class="failure"{{end}}><a href="{{$value.Serial.URL}}">{{$value.Serial.Result}}</a></td>
+    <td{{if eq $value.Parallel.Result "success"}} class="success"{{else if eq $value.Parallel.Result "failure"}} class="failure"{{end}}><a href="{{$value.Parallel.URL}}">{{$value.Parallel.Result}}</a></td>
+    <td{{if eq $value.CSI.Result "success"}} class="success"{{else if eq $value.CSI.Result "failure"}} class="failure"{{end}}><a href="{{$value.CSI.URL}}">{{$value.CSI.Result}}</a></td>
+  </tr>
+  {{ end }}
+</table>
+
+</body>
+</html>
+
+{{end}}
