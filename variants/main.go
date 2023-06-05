@@ -71,19 +71,29 @@ func readTSVFile(filename string) (map[string]internal.Variant, error) {
 		variants := line[1]
 		extendedVariants := line[2]
 
+		extVarSplit := strings.Split(extendedVariants, ",")
 		v := internal.Variant{
 			Name:                variants,
-			Parallel:            strings.Contains(extendedVariants, "parallel"),
-			CSI:                 strings.Contains(extendedVariants, "csi"),
-			UpgradeFromCurrent:  strings.Contains(extendedVariants, "upgrade") && !strings.Contains(extendedVariants, "upgrade-from"), // FIXME
-			UpgradeFromPrevious: strings.Contains(extendedVariants, "upgrade-from"),                                                   // FIXME
-			Serial:              strings.Contains(extendedVariants, "serial"),
+			Parallel:            contains(extVarSplit, "parallel"),
+			CSI:                 contains(extVarSplit, "csi"),
+			UpgradeFromCurrent:  contains(extVarSplit, "upgrade"),
+			UpgradeFromPrevious: contains(extVarSplit, "upgrade-minor"),
+			Serial:              contains(extVarSplit, "serial"),
 		}
 
 		data[job] = v
 	}
 
 	return data, nil
+}
+
+func contains(slice []string, target string) bool {
+	for _, s := range slice {
+		if s == target {
+			return true
+		}
+	}
+	return false
 }
 
 func generateGoFile(filename string, data map[string]internal.Variant) error {
@@ -113,7 +123,15 @@ var Variants = map[string]internal.Variant{
 	footer := `
 }
 `
-
+	entryFmt := `
+"%s": {
+	Name: "%s",
+	Parallel: %v,
+	CSI: %v,
+	UpgradeFromPrevious: %v,
+	UpgradeFromCurrent: %v,
+	Serial: %v,
+},`
 	_, err = file.WriteString(header)
 	if err != nil {
 		return err
@@ -121,7 +139,7 @@ var Variants = map[string]internal.Variant{
 
 	for _, job := range sortedKeys(data) {
 		v := data[job]
-		line := fmt.Sprintf("\"%s\": {Name: \"%s\", Parallel: %v, CSI: %v, UpgradeFromPrevious: %v, Serial: %v},\n", job, v.Name, v.Parallel, v.CSI, v.UpgradeFromPrevious, v.Serial)
+		line := fmt.Sprintf(entryFmt, job, v.Name, v.Parallel, v.CSI, v.UpgradeFromPrevious, v.UpgradeFromCurrent, v.Serial)
 		_, err := file.WriteString(line)
 		if err != nil {
 			return err
