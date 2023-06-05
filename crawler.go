@@ -8,8 +8,8 @@ import (
 	"path"
 	"regexp"
 	"strings"
-	"testgrid/internal"
 
+	"github.com/bertinatto/testgrid/internal"
 	"github.com/gocolly/colly"
 	"k8s.io/apimachinery/pkg/util/sets"
 )

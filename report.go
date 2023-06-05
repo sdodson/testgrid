@@ -2,8 +2,9 @@ package main
 
 import (
 	"html/template"
-	"testgrid/html"
-	"testgrid/internal"
+
+	"github.com/bertinatto/testgrid/html"
+	"github.com/bertinatto/testgrid/internal"
 )
 
 var tmpl = template.Must(template.New("").ParseFS(html.FS, "*.tmpl"))

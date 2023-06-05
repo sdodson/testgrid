@@ -1,4 +1,4 @@
-module testgrid
+module github.com/bertinatto/testgrid
 
 go 1.20
 

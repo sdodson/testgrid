@@ -5,8 +5,9 @@ package main
 import (
 	"log"
 	"os"
-	"testgrid/internal"
-	"testgrid/variants/generated"
+
+	"github.com/bertinatto/testgrid/internal"
+	"github.com/bertinatto/testgrid/variants/generated"
 )
 
 var matrix = map[string]internal.Entry{}
