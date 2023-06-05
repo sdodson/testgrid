@@ -14,11 +14,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 )
 
-type Comment struct {
-	URL  string `string:"url"`
-	Body string `string:"body"`
-}
-
 type Crawler struct {
 	pullRequestID int
 	data          map[string][]*internal.ProwJob
@@ -52,7 +47,11 @@ func (c *Crawler) parsePR() []string {
 
 	// Create a callback that will be called once we visit the PR page.
 	collector.OnResponse(func(r *colly.Response) {
-		var comments []Comment
+		var comments []struct {
+			URL  string `string:"url"`
+			Body string `string:"body"`
+		}
+
 		if err := json.Unmarshal(r.Body, &comments); err != nil {
 			log.Fatalf("error unmarshalling %q: %v", r.Request.URL.String(), err)
 		}
