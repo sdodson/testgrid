@@ -1,11 +1,12 @@
 package main
 
 import (
-	"bufio"
+	"encoding/csv"
 	"flag"
 	"fmt"
 	"os"
 	"os/exec"
+	"sort"
 	"strings"
 
 	"github.com/bertinatto/testgrid/internal"
@@ -50,34 +51,41 @@ func readTSVFile(filename string) (map[string]internal.Variant, error) {
 	}
 	defer file.Close()
 
-	data := make(map[string]internal.Variant)
+	data := make(map[string]internal.Variant, 128)
+	reader := csv.NewReader(file)
+	reader.Comma = '\t'
 
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		line := scanner.Text()
-		fields := strings.Split(line, "\t")
-		if len(fields) != 3 {
-			return nil, fmt.Errorf("invalid TSV format")
-		}
+	records, err := reader.ReadAll()
+	if err != nil {
+		return nil, err
+	}
 
-		job := fields[0]
-		variants := fields[1]
-		extendedVariants := fields[2]
+	if len(records) < 1 {
+		return nil, fmt.Errorf("invalid TSV file: not enough records")
+	}
+
+	// Start from index 1 to discard headers
+	for i := 1; i < len(records); i++ {
+		line := records[i]
+		job := line[0]
+		variants := line[1]
+		extendedVariants := line[2]
 
 		v := internal.Variant{
 			Name:                variants,
 			Parallel:            strings.Contains(extendedVariants, "parallel"),
 			CSI:                 strings.Contains(extendedVariants, "csi"),
-			UpgradeFromPrevious: strings.Contains(extendedVariants, "upgrade"),
+			UpgradeFromCurrent:  strings.Contains(extendedVariants, "upgrade"), // FIXME
+			UpgradeFromPrevious: strings.Contains(extendedVariants, "upgrade"), // FIXME
 			Serial:              strings.Contains(extendedVariants, "serial"),
 		}
 
 		data[job] = v
 	}
 
-	if err := scanner.Err(); err != nil {
-		return nil, err
-	}
+	// if job == "" {
+	// fmt.Printf("================================================================================== %v\n", data)
+	// }e
 
 	return data, nil
 }
@@ -115,7 +123,8 @@ var Variants = map[string]internal.Variant{
 		return err
 	}
 
-	for job, v := range data {
+	for _, job := range sortedKeys(data) {
+		v := data[job]
 		line := fmt.Sprintf("\"%s\": {Name: \"%s\", Parallel: %v, CSI: %v, UpgradeFromPrevious: %v, Serial: %v},\n", job, v.Name, v.Parallel, v.CSI, v.UpgradeFromPrevious, v.Serial)
 		_, err := file.WriteString(line)
 		if err != nil {
@@ -126,4 +135,13 @@ var Variants = map[string]internal.Variant{
 	_, err = file.WriteString(footer)
 
 	return err
+}
+
+func sortedKeys(data map[string]internal.Variant) []string {
+	keys := make([]string, 0, len(data))
+	for k := range data {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	return keys
 }
