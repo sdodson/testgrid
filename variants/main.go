@@ -75,17 +75,13 @@ func readTSVFile(filename string) (map[string]internal.Variant, error) {
 			Name:                variants,
 			Parallel:            strings.Contains(extendedVariants, "parallel"),
 			CSI:                 strings.Contains(extendedVariants, "csi"),
-			UpgradeFromCurrent:  strings.Contains(extendedVariants, "upgrade"), // FIXME
-			UpgradeFromPrevious: strings.Contains(extendedVariants, "upgrade"), // FIXME
+			UpgradeFromCurrent:  strings.Contains(extendedVariants, "upgrade") && !strings.Contains(extendedVariants, "upgrade-from"), // FIXME
+			UpgradeFromPrevious: strings.Contains(extendedVariants, "upgrade-from"),                                                   // FIXME
 			Serial:              strings.Contains(extendedVariants, "serial"),
 		}
 
 		data[job] = v
 	}
-
-	// if job == "" {
-	// fmt.Printf("================================================================================== %v\n", data)
-	// }e
 
 	return data, nil
 }
