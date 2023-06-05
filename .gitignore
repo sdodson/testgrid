@@ -24,4 +24,4 @@ go.work
 report.html
 
 # Binary
-testgrid
+_output
