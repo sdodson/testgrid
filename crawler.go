@@ -15,12 +15,14 @@ import (
 )
 
 type Crawler struct {
+	org           string
+	repo          string
 	pullRequestID int
 	data          map[string][]*internal.ProwJob
 	collector     *colly.Collector
 }
 
-func NewCrawler(id int) *Crawler {
+func NewCrawler(org, repo string, prID int) *Crawler {
 	allowedDomains := []string{
 		"github.com",
 		"api.github.com",
@@ -28,7 +30,9 @@ func NewCrawler(id int) *Crawler {
 		"gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com",
 	}
 	return &Crawler{
-		pullRequestID: id,
+		org:           org,
+		repo:          repo,
+		pullRequestID: prID,
 		data:          make(map[string][]*internal.ProwJob, 128),
 		collector:     newCollector(allowedDomains...),
 	}
@@ -72,7 +76,7 @@ func (c *Crawler) parsePR() []string {
 	})
 
 	// Finally, visit the PR page (through the API).
-	collector.Visit(fmt.Sprintf("https://api.github.com/repos/openshift/kubernetes/issues/%d/comments", c.pullRequestID))
+	collector.Visit(fmt.Sprintf("https://api.github.com/repos/%s/%s/issues/%d/comments", c.org, c.repo, c.pullRequestID))
 
 	return payloadJobs.List()
 }
