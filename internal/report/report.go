@@ -63,9 +63,8 @@ func (r *Report) WriteToFile(file string) error {
 }
 
 func updateEntry(e *internal.Entry, v *internal.Variant, p *internal.ProwJob) internal.Entry {
-	c := internal.Cell{URL: p.URL, Result: p.Result}
 	newEntry := *e
-
+	c := internal.Cell{URL: p.URL, Result: p.Result}
 	if e.InstallSuccess.Result != "success" && p.InstallStatus == "success" {
 		newEntry.InstallSuccess = internal.Cell{URL: p.InstallStatusURL, Result: p.InstallStatus}
 	}
