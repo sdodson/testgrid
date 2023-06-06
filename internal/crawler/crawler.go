@@ -1,4 +1,4 @@
-package main
+package crawler
 
 import (
 	"encoding/json"
@@ -22,7 +22,7 @@ type Crawler struct {
 	collector     *colly.Collector
 }
 
-func NewCrawler(org, repo string, prID int) *Crawler {
+func New(org, repo string, prID int) *Crawler {
 	allowedDomains := []string{
 		"github.com",
 		"api.github.com",
