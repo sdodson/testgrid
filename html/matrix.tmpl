@@ -22,6 +22,11 @@ th, td {
   background-color: rgb(241, 149, 149);
 }
 
+.empty {
+  background-color: #f8f8f8;
+  color: #bbbbbb;
+}
+
 </style>
 <body>
 
@@ -39,11 +44,31 @@ th, td {
   {{ range $key, $value := . }}
   <tr>
     <td>{{$key}}</td>
-    <td{{if eq $value.UpgradeFromCurrent.Result "success"}} class="success"{{else if eq $value.UpgradeFromCurrent.Result "failure"}} class="failure"{{end}}><a href="{{$value.UpgradeFromCurrent.URL}}">{{$value.UpgradeFromCurrent.Result}}</a></td>
-    <td{{if eq $value.UpgradeFromPrevious.Result "success"}} class="success"{{else if eq $value.UpgradeFromPrevious.Result "failure"}} class="failure"{{end}}><a href="{{$value.UpgradeFromPrevious.URL}}">{{$value.UpgradeFromPrevious.Result}}</a></td>
-    <td{{if eq $value.Serial.Result "success"}} class="success"{{else if eq $value.Serial.Result "failure"}} class="failure"{{end}}><a href="{{$value.Serial.URL}}">{{$value.Serial.Result}}</a></td>
-    <td{{if eq $value.Parallel.Result "success"}} class="success"{{else if eq $value.Parallel.Result "failure"}} class="failure"{{end}}><a href="{{$value.Parallel.URL}}">{{$value.Parallel.Result}}</a></td>
-    <td{{if eq $value.CSI.Result "success"}} class="success"{{else if eq $value.CSI.Result "failure"}} class="failure"{{end}}><a href="{{$value.CSI.URL}}">{{$value.CSI.Result}}</a></td>
+    {{with $value.UpgradeFromCurrent}}
+    <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
+      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+    </td>
+    {{end}}
+    {{with $value.UpgradeFromPrevious}}
+    <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
+      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+    </td>
+    {{end}}
+    {{with $value.Serial}}
+    <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
+      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+    </td>
+    {{end}}
+    {{with $value.Parallel}}
+    <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
+      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+    </td>
+    {{end}}
+    {{with $value.CSI}}
+    <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
+      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+    </td>
+    {{end}}
   </tr>
   {{ end }}
 </table>
