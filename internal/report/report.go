@@ -65,6 +65,10 @@ func (r *Report) WriteToFile(file string) error {
 func updateEntry(e *internal.Entry, v *internal.Variant, p *internal.ProwJob) internal.Entry {
 	c := internal.Cell{URL: p.URL, Result: p.Result}
 	newEntry := *e
+
+	if e.InstallSuccess.Result != "success" && p.InstallStatus == "success" {
+		newEntry.InstallSuccess = internal.Cell{URL: p.InstallStatusURL, Result: p.InstallStatus}
+	}
 	if v.Parallel {
 		if e.Parallel.Result != "success" && p.Result == "success" {
 			newEntry.Parallel = c
@@ -96,6 +100,7 @@ func updateEntry(e *internal.Entry, v *internal.Variant, p *internal.ProwJob) in
 func newEntry(v *internal.Variant, p *internal.ProwJob) internal.Entry {
 	c := internal.Cell{URL: p.URL, Result: p.Result}
 	e := internal.Entry{Variant: v.Name}
+	e.InstallSuccess = internal.Cell{URL: p.InstallStatusURL, Result: p.InstallStatus}
 	if v.Parallel {
 		e.Parallel = c
 	}

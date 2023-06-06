@@ -1,12 +1,14 @@
 package crawler
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"log"
 	"net/url"
 	"path"
 	"regexp"
+	"strconv"
 	"strings"
 
 	"github.com/bertinatto/testgrid/internal"
@@ -40,8 +42,10 @@ func New(org, repo string, prID int) *Crawler {
 
 func (c *Crawler) Do() map[string][]*internal.ProwJob {
 	urls := c.parsePR()
-	prowJobs := c.parsePayloadJobs(urls)
-	c.parseProwJobs(prowJobs)
+	prowJobsURLs, finishedURLs := c.parsePayloadJobs(urls)
+	installURLs := c.parseProwJobsURLs(prowJobsURLs)
+	c.parseInstallTXT(installURLs)
+	c.parseFinishedJSON(finishedURLs)
 	return c.data
 }
 
@@ -81,8 +85,9 @@ func (c *Crawler) parsePR() []string {
 	return payloadJobs.List()
 }
 
-func (c *Crawler) parsePayloadJobs(urls []string) []string {
-	prowJobURLs := []string{}
+func (c *Crawler) parsePayloadJobs(urls []string) ([]string, []string) {
+	prowJobsURLs := []string{}
+	finishedURLs := []string{}
 	collector := newCollector("pr-payload-tests.ci.openshift.org")
 
 	// Create a callback that will be called once we visit payload job page.
@@ -115,7 +120,8 @@ func (c *Crawler) parsePayloadJobs(urls []string) []string {
 				ResultURL: finished.String(),
 			})
 
-			prowJobURLs = append(prowJobURLs, finished.String())
+			prowJobsURLs = append(prowJobsURLs, href)
+			finishedURLs = append(finishedURLs, finished.String())
 		})
 	})
 
@@ -124,10 +130,10 @@ func (c *Crawler) parsePayloadJobs(urls []string) []string {
 		collector.Visit(url)
 	}
 
-	return prowJobURLs
+	return prowJobsURLs, finishedURLs
 }
 
-func (c *Crawler) parseProwJobs(urls []string) {
+func (c *Crawler) parseFinishedJSON(urls []string) {
 	collector := newCollector("gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com")
 
 	// Before visiting prow job pages, create a callback that will be called for every visited page.
@@ -153,6 +159,102 @@ func (c *Crawler) parseProwJobs(urls []string) {
 	for _, url := range urls {
 		collector.Visit(url)
 	}
+}
+
+func (c *Crawler) parseInstallTXT(urls []string) {
+	collector := newCollector("gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com")
+
+	// Before visiting prow job pages, create a callback that will be called for every visited page.
+	collector.OnResponse(func(r *colly.Response) {
+		status := string(bytes.TrimSpace(r.Body))
+		_, err := strconv.Atoi(status)
+		if err != nil {
+			// This means the status is invalid, so leave it empty
+			return
+		}
+
+		// Assume the installation succeeded if the install-status.txt
+		// file contains "0" otherwise assume that the it failed.
+		switch status {
+		case "":
+			break
+		case "0":
+			status = "success"
+		default:
+			status = "failure"
+		}
+
+		// Store the installation status to our global store.
+		for _, values := range c.data {
+			for _, j := range values {
+				if j.InstallStatusURL == r.Request.URL.String() {
+					j.InstallStatus = string(status)
+				}
+			}
+		}
+	})
+
+	// Finally, Visit all prow job urls provided to this function.
+	for _, url := range urls {
+		collector.Visit(url)
+	}
+}
+
+func (c *Crawler) parseProwJobsURLs(urls []string) []string {
+	installURLs := []string{}
+	collector := newCollector("prow.ci.openshift.org")
+
+	// Before visiting prow job pages, create a callback that will be called for every visited page.
+	collector.OnResponse(func(r *colly.Response) {
+		lensArtifacts := map[string][]string{}
+		re := regexp.MustCompile(`var lensArtifacts = (.+?);`)
+		matches := re.FindSubmatch(r.Body)
+		if len(matches) > 1 {
+			jsonStr := matches[1]
+			err := json.Unmarshal([]byte(jsonStr), &lensArtifacts)
+			if err != nil {
+				log.Fatalf("error unmarshalling: %v", err)
+			}
+		}
+
+		statusPath := ""
+		for _, v := range lensArtifacts["0"] {
+			if strings.HasSuffix(v, "gather-must-gather/finished.json") {
+				statusPath = strings.ReplaceAll(v, "finished.json", "artifacts/install-status.txt")
+			}
+		}
+
+		if statusPath != "" {
+			// Construct the URL for the install-status.txt file.
+			base := strings.ReplaceAll(
+				r.Request.URL.String(),
+				"https://prow.ci.openshift.org/view/gs/",
+				"https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/",
+			)
+			install, err := url.Parse(base)
+			if err != nil {
+				log.Fatalf("error parsing %q: %v", base, err)
+			}
+			install.Path = path.Join(install.Path, statusPath)
+			installURLs = append(installURLs, install.String())
+
+			// Store the install status URL to our global store.
+			for _, values := range c.data {
+				for _, j := range values {
+					if j.URL == r.Request.URL.String() {
+						j.InstallStatusURL = install.String()
+					}
+				}
+			}
+		}
+	})
+
+	// Finally, Visit all prow job urls provided to this function.
+	for _, url := range urls {
+		collector.Visit(url)
+	}
+
+	return installURLs
 }
 
 func newCollector(allowed ...string) *colly.Collector {

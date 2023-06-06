@@ -35,6 +35,7 @@ th, td {
 <table>
   <tr>
     <th>Variant</th>
+    <th>Install Status</th>
     <th>Upgrade from current</th>
     <th>Upgrade from previous</th>
     <th>Serial</th>
@@ -44,29 +45,34 @@ th, td {
   {{ range $key, $value := . }}
   <tr>
     <td>{{$key}}</td>
+    {{with $value.InstallSuccess}}
+    <td{{if eq .Result "success"}} class="success" {{else if eq .Result ""}} class="empty" {{else}} class="failure" {{end}}>
+      {{if eq .Result ""}}no data{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+    </td>
+    {{end}}
     {{with $value.UpgradeFromCurrent}}
     <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
-      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+      {{if eq .Result ""}}no data{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
     </td>
     {{end}}
     {{with $value.UpgradeFromPrevious}}
     <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
-      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+      {{if eq .Result ""}}no data{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
     </td>
     {{end}}
     {{with $value.Serial}}
     <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
-      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+      {{if eq .Result ""}}no data{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
     </td>
     {{end}}
     {{with $value.Parallel}}
     <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
-      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+      {{if eq .Result ""}}no data{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
     </td>
     {{end}}
     {{with $value.CSI}}
     <td{{if eq .Result "success"}} class="success"{{else if eq .Result "failure"}} class="failure"{{else if eq .Result ""}} class="empty"{{end}}>
-      {{if eq .Result ""}}not tested{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
+      {{if eq .Result ""}}no data{{else}}<a href="{{.URL}}">{{.Result}}</a>{{end}}
     </td>
     {{end}}
   </tr>
