@@ -24,22 +24,14 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Validate the input string
-	validInput, err := regexp.MatchString(`^(\w+)/(\w+)#(\d+)$`, *prFlag)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "ERROR: Failed to validate input: %v\n", err)
-		os.Exit(1)
-	}
-
-	if !validInput {
-		fmt.Fprintf(os.Stderr, "ERROR Invalid input format. Expected: 'org/repo#pr: %v\n", err)
-		flag.PrintDefaults()
-		os.Exit(1)
-	}
-
 	// Extract organization, repository, and pull request ID
 	re := regexp.MustCompile(`^(\w+)/(\w+)#(\d+)$`)
 	matches := re.FindStringSubmatch(*prFlag)
+	if len(matches) < 3 {
+		fmt.Fprintf(os.Stderr, "ERROR Invalid input format %q. Expected: 'org/repo#pr\n", *prFlag)
+		flag.PrintDefaults()
+		os.Exit(1)
+	}
 
 	org := matches[1]
 	repo := matches[2]
