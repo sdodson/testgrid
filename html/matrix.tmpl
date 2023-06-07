@@ -30,7 +30,8 @@ th, td {
 </style>
 <body>
 
-<h2>Test Matrix</h2>
+<h2>Test Matrix: <a href={{.URL}}>{{.Title}}</a></h2>
+<p><small>Report generated on {{.GeneratedOn.Format "2006-01-02 at 15:04 UTC"}}</small></p>
 
 <table>
   <tr>
@@ -42,7 +43,7 @@ th, td {
     <th>Parallel</th>
     <th>CSI</th>
   </tr>
-  {{ range $key, $value := . }}
+  {{ range $key, $value := .Data }}
   <tr>
     <td>{{$key}}</td>
     {{with $value.InstallSuccess}}

@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"log"
 	"os"
+	"time"
 
 	"github.com/bertinatto/testgrid/html"
 	"github.com/bertinatto/testgrid/internal"
@@ -12,12 +13,16 @@ import (
 )
 
 type Report struct {
+	title  string
+	url    string
 	tmpl   *template.Template
 	matrix map[string]internal.Entry
 }
 
-func New() *Report {
+func New(org, repo string, prID int) *Report {
 	return &Report{
+		title:  fmt.Sprintf("%s/%s#%d", org, repo, prID),
+		url:    fmt.Sprintf("https://github.com/%s/%s/pull/%d", org, repo, prID),
 		matrix: make(map[string]internal.Entry, 128),
 		tmpl:   template.Must(template.New("").ParseFS(html.FS, "*.tmpl")),
 	}
@@ -55,7 +60,18 @@ func (r *Report) WriteToFile(file string) error {
 	}
 	defer f.Close()
 
-	err = r.tmpl.ExecuteTemplate(f, "matrix", r.matrix)
+	data := struct {
+		Title       string
+		URL         string
+		GeneratedOn time.Time
+		Data        any
+	}{
+		Title:       r.title,
+		URL:         r.url,
+		GeneratedOn: time.Now().UTC(),
+		Data:        r.matrix,
+	}
+	err = r.tmpl.ExecuteTemplate(f, "matrix", data)
 	if err != nil {
 		return fmt.Errorf("failed to execute template 'matrix': %w", err)
 	}

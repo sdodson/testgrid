@@ -42,7 +42,7 @@ func main() {
 	}
 
 	jobs := crawler.New(org, repo, prID).Do()
-	report := report.New()
+	report := report.New(org, repo, prID)
 	err = report.Create(jobs)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "ERROR: Failed to create report: %v", err)
