@@ -80,7 +80,7 @@ func (c *Crawler) parsePR() []string {
 	})
 
 	// Finally, visit the PR page (through the API).
-	collector.Visit(fmt.Sprintf("https://api.github.com/repos/%s/%s/issues/%d/comments?per_page=50", c.org, c.repo, c.pullRequestID))
+	collector.Visit(fmt.Sprintf("https://api.github.com/repos/%s/%s/issues/%d/comments?per_page=100", c.org, c.repo, c.pullRequestID))
 
 	return payloadJobs.List()
 }
