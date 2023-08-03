@@ -206,3 +206,9 @@ periodic-ci-openshift-release-master-nightly-4.14-e2e-nutanix	amd64,ovn,ha	amd64
 periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-compact-ovn-remote-libvirt-ppc64le	ppc64le,ovn,ha,compact	ppc64le,ovn,ha,compact,parallel
 periodic-ci-openshift-release-master-ci-4.14-e2e-network-migration	amd64,ovn,ha	amd64,ovn,ha,parallel
 periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-sdn	metal-ipi,amd64,sdn,ha	metal-ipi,amd64,sdn,ha,parallel,metal,ipi
+periodic-ci-openshift-hypershift-release-4.14-periodics-e2e-aws-ovn-conformance	aws,amd64,ovn,ha,hypershift	aws,amd64,ovn,ha,hypershift
+periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ovn-assisted	metal-upi,amd64,ovn,ha,assisted	metal-upi,amd64,ovn,ha,assisted,parallel,assisted,metal,upi
+periodic-ci-openshift-hypershift-release-4.14-periodics-e2e-aws-ovn	aws,amd64,ovn,ha,hypershift	aws,amd64,ovn,ha,hypershift,parallel
+periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-sdn-serial	gcp,amd64,sdn,ha,serial	gcp,amd64,sdn,ha,serial
+periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-sdn-upgrade	gcp,amd64,sdn,upgrade,upgrade-micro,ha	gcp,amd64,sdn,upgrade,upgrade-micro,ha,parallel
+periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-sdn-upgrade	gcp,amd64,sdn,upgrade,upgrade-micro,ha	gcp,amd64,sdn,upgrade,upgrade-micro,ha,parallel
