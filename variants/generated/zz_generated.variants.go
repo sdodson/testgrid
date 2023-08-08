@@ -614,6 +614,14 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
+	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-ovn-upgrade": {
+		Name:                "gcp,amd64,ovn,upgrade,upgrade-micro,ha",
+		Parallel:            true,
+		CSI:                 false,
+		UpgradeFromPrevious: false,
+		UpgradeFromCurrent:  true,
+		Serial:              false,
+	},
 	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-sdn": {
 		Name:                "gcp,amd64,sdn,ha",
 		Parallel:            true,
