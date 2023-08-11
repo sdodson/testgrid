@@ -61,7 +61,8 @@ func (c *Crawler) parsePR() []string {
 		}
 
 		if err := json.Unmarshal(r.Body, &comments); err != nil {
-			log.Fatalf("error unmarshalling %q: %v", r.Request.URL.String(), err)
+			log.Printf("error unmarshalling %q: %v", r.Request.URL.String(), err)
+			return
 		}
 
 		// Create a list of all links to payload runs available in the PR page.
@@ -140,7 +141,8 @@ func (c *Crawler) parseFinishedJSON(urls []string) {
 	collector.OnResponse(func(r *colly.Response) {
 		jobResult := map[string]any{}
 		if err := json.Unmarshal(r.Body, &jobResult); err != nil {
-			log.Fatalf("error unmarshalling %q: %v", r.Request.URL.String(), err)
+			log.Printf("error unmarshalling %q: %v", r.Request.URL.String(), err)
+			return
 		}
 
 		result := strings.ToLower(jobResult["result"].(string))
@@ -213,7 +215,8 @@ func (c *Crawler) parseProwJobsURLs(urls []string) []string {
 			jsonStr := matches[1]
 			err := json.Unmarshal([]byte(jsonStr), &lensArtifacts)
 			if err != nil {
-				log.Fatalf("error unmarshalling: %v", err)
+				log.Printf("error unmarshalling: %v", err)
+				return
 			}
 		}
 
