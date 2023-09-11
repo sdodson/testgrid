@@ -6,7 +6,7 @@ import "github.com/bertinatto/testgrid/internal"
 
 var Variants = map[string]internal.Variant{
 
-	"aggregated-aws-ovn-upgrade-4.14-micro-release-openshift-release-analysis-aggregator": {
+	"aggregated-aws-ovn-upgrade-4.15-micro-release-openshift-release-analysis-aggregator": {
 		Name:                "aggregated",
 		Parallel:            true,
 		CSI:                 false,
@@ -14,7 +14,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"aggregated-aws-ovn-upgrade-4.14-minor-release-openshift-release-analysis-aggregator": {
+	"aggregated-aws-ovn-upgrade-4.15-minor-release-openshift-release-analysis-aggregator": {
 		Name:                "aggregated",
 		Parallel:            true,
 		CSI:                 false,
@@ -22,7 +22,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"aggregated-aws-sdn-upgrade-4.14-micro-release-openshift-release-analysis-aggregator": {
+	"aggregated-aws-sdn-upgrade-4.15-micro-release-openshift-release-analysis-aggregator": {
 		Name:                "aggregated",
 		Parallel:            true,
 		CSI:                 false,
@@ -30,7 +30,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"aggregated-azure-ovn-upgrade-4.14-micro-release-openshift-release-analysis-aggregator": {
+	"aggregated-azure-ovn-upgrade-4.15-micro-release-openshift-release-analysis-aggregator": {
 		Name:                "aggregated",
 		Parallel:            true,
 		CSI:                 false,
@@ -38,7 +38,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"aggregated-azure-sdn-upgrade-4.14-minor-release-openshift-release-analysis-aggregator": {
+	"aggregated-azure-sdn-upgrade-4.15-minor-release-openshift-release-analysis-aggregator": {
 		Name:                "aggregated",
 		Parallel:            true,
 		CSI:                 false,
@@ -46,7 +46,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"aggregated-gcp-ovn-upgrade-4.14-minor-release-openshift-release-analysis-aggregator": {
+	"aggregated-gcp-ovn-upgrade-4.15-minor-release-openshift-release-analysis-aggregator": {
 		Name:                "aggregated",
 		Parallel:            true,
 		CSI:                 false,
@@ -54,7 +54,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-main-periodics-4.14-conformance-agent-ovn": {
+	"periodic-ci-openshift-hypershift-main-periodics-4.15-conformance-agent-ovn": {
 		Name:                "amd64,ovn,ha,hypershift",
 		Parallel:            true,
 		CSI:                 false,
@@ -62,7 +62,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-main-periodics-4.14-conformance-aws-ovn": {
+	"periodic-ci-openshift-hypershift-main-periodics-4.15-conformance-aws-ovn": {
 		Name:                "aws,amd64,ovn,ha,hypershift",
 		Parallel:            true,
 		CSI:                 false,
@@ -70,7 +70,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-main-periodics-4.14-conformance-aws-ovn-proxy": {
+	"periodic-ci-openshift-hypershift-main-periodics-4.15-conformance-aws-ovn-proxy": {
 		Name:                "aws,amd64,ovn,ha,hypershift,proxy",
 		Parallel:            true,
 		CSI:                 false,
@@ -78,7 +78,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-main-periodics-4.14-conformance-mce-aws-ovn": {
+	"periodic-ci-openshift-hypershift-main-periodics-4.15-conformance-mce-aws-ovn": {
 		Name:                "aws,amd64,ovn,ha,hypershift",
 		Parallel:            true,
 		CSI:                 false,
@@ -86,7 +86,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-main-periodics-4.14-e2e-aws-ovn-periodic-conformance-serial": {
+	"periodic-ci-openshift-hypershift-main-periodics-4.15-e2e-aws-ovn-periodic-conformance-serial": {
 		Name:                "aws,amd64,ovn,ha,hypershift,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -94,7 +94,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-hypershift-main-periodics-4.14-e2e-aws-periodic": {
+	"periodic-ci-openshift-hypershift-main-periodics-4.15-e2e-aws-periodic": {
 		Name:                "aws,amd64,ovn,ha,hypershift",
 		Parallel:            true,
 		CSI:                 false,
@@ -102,7 +102,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-main-periodics-4.14-e2e-ibmcloud-iks": {
+	"periodic-ci-openshift-hypershift-main-periodics-4.15-e2e-ibmcloud-iks": {
 		Name:                "amd64,ovn,ha,hypershift",
 		Parallel:            true,
 		CSI:                 false,
@@ -110,7 +110,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-main-periodics-4.14-e2e-ibmcloud-roks": {
+	"periodic-ci-openshift-hypershift-main-periodics-4.15-e2e-ibmcloud-roks": {
 		Name:                "amd64,ovn,ha,hypershift",
 		Parallel:            true,
 		CSI:                 false,
@@ -118,7 +118,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-main-periodics-4.14-e2e-powervs-periodic": {
+	"periodic-ci-openshift-hypershift-main-periodics-4.15-e2e-powervs-periodic": {
 		Name:                "amd64,ovn,ha,hypershift",
 		Parallel:            true,
 		CSI:                 false,
@@ -126,7 +126,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-release-4.14-periodics-e2e-aws-ovn": {
+	"periodic-ci-openshift-hypershift-release-4.15-periodics-e2e-aws-ovn": {
 		Name:                "aws,amd64,ovn,ha,hypershift",
 		Parallel:            true,
 		CSI:                 false,
@@ -134,7 +134,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-hypershift-release-4.14-periodics-e2e-aws-ovn-conformance": {
+	"periodic-ci-openshift-hypershift-release-4.15-periodics-e2e-aws-ovn-conformance": {
 		Name:                "aws,amd64,ovn,ha,hypershift",
 		Parallel:            false,
 		CSI:                 false,
@@ -142,7 +142,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-aws-ovn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-aws-ovn-arm64": {
 		Name:                "aws,arm64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -150,7 +150,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-aws-ovn-arm64-single-node": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-aws-ovn-arm64-single-node": {
 		Name:                "aws,arm64,ovn,single-node",
 		Parallel:            true,
 		CSI:                 false,
@@ -158,7 +158,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-aws-ovn-arm64-techpreview": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-aws-ovn-arm64-techpreview": {
 		Name:                "aws,arm64,ovn,ha,techpreview",
 		Parallel:            true,
 		CSI:                 false,
@@ -166,7 +166,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-aws-ovn-arm64-techpreview-serial": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-aws-ovn-arm64-techpreview-serial": {
 		Name:                "aws,arm64,ovn,ha,serial,techpreview",
 		Parallel:            false,
 		CSI:                 false,
@@ -174,7 +174,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-aws-ovn-heterogeneous": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-aws-ovn-heterogeneous": {
 		Name:                "aws,heterogeneous,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -182,7 +182,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-aws-ovn-heterogeneous-upgrade": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-aws-ovn-heterogeneous-upgrade": {
 		Name:                "aws,heterogeneous,ovn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -190,7 +190,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-aws-sdn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-aws-sdn-arm64": {
 		Name:                "aws,arm64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -198,7 +198,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-aws-upi-ovn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-aws-upi-ovn-arm64": {
 		Name:                "aws,arm64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -206,7 +206,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-azure-ovn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-azure-ovn-arm64": {
 		Name:                "azure,arm64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -214,7 +214,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-compact-ovn-remote-libvirt-ppc64le": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-compact-ovn-remote-libvirt-ppc64le": {
 		Name:                "ppc64le,ovn,ha,compact",
 		Parallel:            true,
 		CSI:                 false,
@@ -222,7 +222,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-compact-ovn-remote-libvirt-s390x": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-compact-ovn-remote-libvirt-s390x": {
 		Name:                "s390x,ovn,ha,compact",
 		Parallel:            true,
 		CSI:                 false,
@@ -230,7 +230,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-ovn-ppc64le-powervs": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-ovn-ppc64le-powervs": {
 		Name:                "ppc64le,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -238,7 +238,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-ovn-remote-libvirt-ppc64le": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-ovn-remote-libvirt-ppc64le": {
 		Name:                "ppc64le,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -246,7 +246,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-ovn-remote-libvirt-s390x": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-ovn-remote-libvirt-s390x": {
 		Name:                "s390x,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -254,7 +254,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-ovn-serial-aws-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-ovn-serial-aws-arm64": {
 		Name:                "aws,arm64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -262,7 +262,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-sdn-serial-aws-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-sdn-serial-aws-arm64": {
 		Name:                "aws,arm64,sdn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -270,7 +270,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-serial-aws-ovn-heterogeneous": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-serial-aws-ovn-heterogeneous": {
 		Name:                "aws,heterogeneous,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -278,7 +278,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-serial-ovn-ppc64le-powervs": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-serial-ovn-ppc64le-powervs": {
 		Name:                "ppc64le,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -286,7 +286,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-serial-ovn-remote-libvirt-ppc64le": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-serial-ovn-remote-libvirt-ppc64le": {
 		Name:                "ppc64le,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -294,7 +294,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-e2e-upgrade-aws-ovn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-e2e-upgrade-aws-ovn-arm64": {
 		Name:                "aws,arm64,ovn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -302,7 +302,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-fips-ovn-remote-libvirt-ppc64le": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-fips-ovn-remote-libvirt-ppc64le": {
 		Name:                "ppc64le,ovn,ha,fips",
 		Parallel:            true,
 		CSI:                 false,
@@ -310,7 +310,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-fips-ovn-remote-libvirt-s390x": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-fips-ovn-remote-libvirt-s390x": {
 		Name:                "s390x,ovn,ha,fips",
 		Parallel:            true,
 		CSI:                 false,
@@ -318,7 +318,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-image-ecosystem-aws-ovn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-image-ecosystem-aws-ovn-arm64": {
 		Name:                "aws,arm64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -326,7 +326,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-installer-e2e-aws-ovn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-installer-e2e-aws-ovn-arm64": {
 		Name:                "aws,arm64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -334,7 +334,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-ocp-jenkins-e2e-aws-ovn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-ocp-jenkins-e2e-aws-ovn-arm64": {
 		Name:                "aws,arm64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -342,7 +342,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-upgrade-from-nightly-4.13-ocp-e2e-aws-heterogeneous-upgrade": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-upgrade-from-nightly-4.14-ocp-e2e-aws-heterogeneous-upgrade": {
 		Name:                "aws,heterogeneous,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -350,7 +350,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-upgrade-from-nightly-4.13-ocp-e2e-aws-sdn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-upgrade-from-nightly-4.14-ocp-e2e-aws-sdn-arm64": {
 		Name:                "aws,arm64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -358,7 +358,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-upgrade-from-nightly-4.13-ocp-ovn-remote-libvirt-ppc64le": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-upgrade-from-nightly-4.14-ocp-ovn-remote-libvirt-ppc64le": {
 		Name:                "ppc64le,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -366,7 +366,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-upgrade-from-nightly-4.13-ocp-ovn-remote-libvirt-s390x": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-upgrade-from-nightly-4.14-ocp-ovn-remote-libvirt-s390x": {
 		Name:                "s390x,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -374,7 +374,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-upgrade-from-stable-4.13-ocp-e2e-aws-heterogeneous-upgrade": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-upgrade-from-stable-4.14-ocp-e2e-aws-heterogeneous-upgrade": {
 		Name:                "aws,heterogeneous,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -382,7 +382,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-multiarch-master-nightly-4.14-upgrade-from-stable-4.13-ocp-e2e-aws-sdn-arm64": {
+	"periodic-ci-openshift-multiarch-master-nightly-4.15-upgrade-from-stable-4.14-ocp-e2e-aws-sdn-arm64": {
 		Name:                "aws,arm64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -390,7 +390,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-cilium": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-cilium": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -398,7 +398,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-ovn": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-ovn": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -406,7 +406,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-ovn-network-migration": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-ovn-network-migration": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -414,7 +414,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-ovn-serial": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-ovn-serial": {
 		Name:                "aws,amd64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -422,7 +422,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-ovn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-ovn-upgrade": {
 		Name:                "aws,amd64,ovn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -430,7 +430,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn": {
 		Name:                "aws,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -438,7 +438,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-cgroupsv2": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-cgroupsv2": {
 		Name:                "aws,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -446,7 +446,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-crun": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-crun": {
 		Name:                "aws,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -454,7 +454,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-imdsv2": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-imdsv2": {
 		Name:                "aws,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -462,7 +462,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-multitenant": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-multitenant": {
 		Name:                "aws,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -470,7 +470,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-no-capabilities": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-no-capabilities": {
 		Name:                "aws,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -478,7 +478,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-serial": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-serial": {
 		Name:                "aws,amd64,sdn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -486,7 +486,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-techpreview": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-techpreview": {
 		Name:                "aws,amd64,sdn,ha,techpreview",
 		Parallel:            true,
 		CSI:                 false,
@@ -494,7 +494,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-techpreview-serial": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-techpreview-serial": {
 		Name:                "aws,amd64,sdn,ha,serial,techpreview",
 		Parallel:            false,
 		CSI:                 false,
@@ -502,7 +502,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-upgrade": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -510,7 +510,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-sdn-upgrade-rollback": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-sdn-upgrade-rollback": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -518,7 +518,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-aws-upgrade-ovn-single-node": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-aws-upgrade-ovn-single-node": {
 		Name:                "aws,amd64,ovn,upgrade,upgrade-micro,single-node",
 		Parallel:            true,
 		CSI:                 false,
@@ -526,7 +526,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-azure-cilium": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-azure-cilium": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -534,7 +534,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-azure-ovn": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-azure-ovn": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -542,7 +542,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-azure-ovn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-azure-ovn-upgrade": {
 		Name:                "azure,amd64,ovn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -550,7 +550,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-azure-sdn": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-azure-sdn": {
 		Name:                "azure,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -558,7 +558,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-azure-sdn-serial": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-azure-sdn-serial": {
 		Name:                "azure,amd64,sdn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -566,7 +566,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-azure-sdn-techpreview": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-azure-sdn-techpreview": {
 		Name:                "azure,amd64,sdn,ha,techpreview",
 		Parallel:            true,
 		CSI:                 false,
@@ -574,7 +574,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-azure-sdn-techpreview-serial": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-azure-sdn-techpreview-serial": {
 		Name:                "azure,amd64,sdn,ha,serial,techpreview",
 		Parallel:            false,
 		CSI:                 false,
@@ -582,7 +582,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-azure-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-azure-sdn-upgrade": {
 		Name:                "azure,amd64,sdn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -590,7 +590,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-cilium": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-cilium": {
 		Name:                "gcp,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -598,7 +598,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-ovn": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-ovn": {
 		Name:                "gcp,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -606,7 +606,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-ovn-mount-ns-hiding": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-ovn-mount-ns-hiding": {
 		Name:                "gcp,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -614,7 +614,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-ovn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-ovn-upgrade": {
 		Name:                "gcp,amd64,ovn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -622,7 +622,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-sdn": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-sdn": {
 		Name:                "gcp,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -630,7 +630,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-sdn-serial": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-sdn-serial": {
 		Name:                "gcp,amd64,sdn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -638,7 +638,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-sdn-techpreview": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-sdn-techpreview": {
 		Name:                "gcp,amd64,sdn,ha,techpreview",
 		Parallel:            true,
 		CSI:                 false,
@@ -646,7 +646,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-sdn-techpreview-serial": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-sdn-techpreview-serial": {
 		Name:                "gcp,amd64,sdn,ha,serial,techpreview",
 		Parallel:            false,
 		CSI:                 false,
@@ -654,7 +654,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-gcp-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-sdn-upgrade": {
 		Name:                "gcp,amd64,sdn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -662,7 +662,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-network-migration": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-network-migration": {
 		Name:                "amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -670,7 +670,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-e2e-network-migration-rollback": {
+	"periodic-ci-openshift-release-master-ci-4.15-e2e-network-migration-rollback": {
 		Name:                "amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -678,7 +678,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-aws-ovn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-ovn-upgrade": {
 		Name:                "aws,amd64,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -686,7 +686,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-aws-ovn-upgrade-rollback": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-ovn-upgrade-rollback": {
 		Name:                "aws,amd64,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -694,7 +694,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-aws-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-sdn-upgrade": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -702,7 +702,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-aws-sdn-upgrade-infra": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-sdn-upgrade-infra": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -710,7 +710,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-aws-sdn-upgrade-rollback": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-sdn-upgrade-rollback": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -718,7 +718,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-aws-sdn-upgrade-workload": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-sdn-upgrade-workload": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -726,7 +726,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-aws-uwm": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-uwm": {
 		Name:                "aws,amd64,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -734,7 +734,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-azure-ovn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-azure-ovn-upgrade": {
 		Name:                "azure,amd64,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -742,7 +742,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-azure-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-azure-sdn-upgrade": {
 		Name:                "azure,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -750,7 +750,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-gcp-ovn-rt-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-gcp-ovn-rt-upgrade": {
 		Name:                "gcp,amd64,ovn,upgrade,upgrade-minor,ha,realtime",
 		Parallel:            true,
 		CSI:                 false,
@@ -758,7 +758,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-gcp-ovn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-gcp-ovn-upgrade": {
 		Name:                "gcp,amd64,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -766,7 +766,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-gcp-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-gcp-sdn-upgrade": {
 		Name:                "gcp,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -774,7 +774,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-ovirt-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-ovirt-sdn-upgrade": {
 		Name:                "ovirt,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -782,7 +782,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-e2e-vsphere-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-vsphere-sdn-upgrade": {
 		Name:                "vsphere-ipi,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -790,7 +790,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-ci-4.14-upgrade-from-stable-4.13-from-stable-4.12-e2e-aws-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-from-stable-4.12-e2e-aws-sdn-upgrade": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -798,7 +798,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-console-aws": {
+	"periodic-ci-openshift-release-master-nightly-4.15-console-aws": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -806,7 +806,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-alibaba-csi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-alibaba-csi": {
 		Name:                "alibaba,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -814,7 +814,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-alibaba-ovn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-alibaba-ovn": {
 		Name:                "alibaba,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -822,7 +822,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-csi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-csi": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -830,7 +830,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-driver-toolkit": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-driver-toolkit": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -838,7 +838,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-etcd-scaling": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-etcd-scaling": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -846,7 +846,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-fips": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-fips": {
 		Name:                "aws,amd64,ovn,ha,fips",
 		Parallel:            true,
 		CSI:                 false,
@@ -854,7 +854,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-fips-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-fips-serial": {
 		Name:                "aws,amd64,ovn,ha,serial,fips",
 		Parallel:            false,
 		CSI:                 false,
@@ -862,7 +862,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-local-gateway": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-local-gateway": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -870,7 +870,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-multi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-multi": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -878,7 +878,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-proxy": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-proxy": {
 		Name:                "aws,amd64,ovn,ha,proxy",
 		Parallel:            true,
 		CSI:                 false,
@@ -886,7 +886,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-serial": {
 		Name:                "aws,amd64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -894,7 +894,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-single-node": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-single-node": {
 		Name:                "aws,amd64,ovn,single-node",
 		Parallel:            true,
 		CSI:                 false,
@@ -902,7 +902,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-single-node-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-single-node-serial": {
 		Name:                "aws,amd64,ovn,single-node,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -910,7 +910,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-single-node-workers": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-single-node-workers": {
 		Name:                "aws,amd64,ovn,single-node",
 		Parallel:            true,
 		CSI:                 false,
@@ -918,7 +918,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-upi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-upi": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -926,7 +926,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-ovn-workers-rhel8": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-ovn-workers-rhel8": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -934,7 +934,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-sdn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-sdn": {
 		Name:                "aws,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -942,7 +942,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-sdn-cgroupsv2": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-sdn-cgroupsv2": {
 		Name:                "aws,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -950,7 +950,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-sdn-crun": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-sdn-crun": {
 		Name:                "aws,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -958,7 +958,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-sdn-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-sdn-serial": {
 		Name:                "aws,amd64,sdn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -966,7 +966,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-aws-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-sdn-upgrade": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -974,7 +974,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azure-csi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azure-csi": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -982,7 +982,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azure-deploy-cnv": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azure-deploy-cnv": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -990,7 +990,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azure-ovn-etcd-scaling": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azure-ovn-etcd-scaling": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -998,7 +998,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azure-ovn-upi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azure-ovn-upi": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1006,7 +1006,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azure-sdn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azure-sdn": {
 		Name:                "azure,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1014,7 +1014,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azure-sdn-fips": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azure-sdn-fips": {
 		Name:                "azure,amd64,sdn,ha,fips",
 		Parallel:            true,
 		CSI:                 false,
@@ -1022,7 +1022,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azure-sdn-fips-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azure-sdn-fips-serial": {
 		Name:                "azure,amd64,sdn,ha,serial,fips",
 		Parallel:            false,
 		CSI:                 false,
@@ -1030,7 +1030,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azure-upgrade-cnv": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azure-upgrade-cnv": {
 		Name:                "azure,amd64,ovn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1038,7 +1038,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azurestack-csi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azurestack-csi": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -1046,7 +1046,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-azurestack-ovn-upi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-azurestack-ovn-upi": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1054,7 +1054,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-libvirt-cert-rotation": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-libvirt-cert-rotation": {
 		Name:                "gcp,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1062,7 +1062,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-ovn-csi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-ovn-csi": {
 		Name:                "gcp,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -1070,7 +1070,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-ovn-etcd-scaling": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-ovn-etcd-scaling": {
 		Name:                "gcp,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1078,7 +1078,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-ovn-fips": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-ovn-fips": {
 		Name:                "gcp,amd64,ovn,ha,fips",
 		Parallel:            true,
 		CSI:                 false,
@@ -1086,7 +1086,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-ovn-rt": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-ovn-rt": {
 		Name:                "gcp,amd64,ovn,ha,realtime",
 		Parallel:            true,
 		CSI:                 false,
@@ -1094,7 +1094,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-ovn-upi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-ovn-upi": {
 		Name:                "gcp,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1102,7 +1102,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-sdn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-sdn": {
 		Name:                "gcp,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1110,7 +1110,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-sdn-fips-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-sdn-fips-serial": {
 		Name:                "gcp,amd64,sdn,ha,serial,fips",
 		Parallel:            false,
 		CSI:                 false,
@@ -1118,7 +1118,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-sdn-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-sdn-serial": {
 		Name:                "gcp,amd64,sdn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1126,7 +1126,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-gcp-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-gcp-sdn-upgrade": {
 		Name:                "gcp,amd64,sdn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1134,7 +1134,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-ibmcloud-csi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-ibmcloud-csi": {
 		Name:                "amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -1142,7 +1142,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-ovn-dualstack": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-ovn-dualstack": {
 		Name:                "metal-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1150,7 +1150,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-ovn-dualstack-local-gateway": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-ovn-dualstack-local-gateway": {
 		Name:                "metal-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1158,7 +1158,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-ovn-ipv4": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-ovn-ipv4": {
 		Name:                "metal-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1166,7 +1166,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-ovn-ipv6": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-ovn-ipv6": {
 		Name:                "metal-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1174,7 +1174,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-sdn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-sdn": {
 		Name:                "metal-ipi,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1182,7 +1182,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-sdn-bm": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-sdn-bm": {
 		Name:                "metal-ipi,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1190,7 +1190,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-sdn-bm-upgrade": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-sdn-bm-upgrade": {
 		Name:                "metal-ipi,amd64,sdn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1198,7 +1198,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-sdn-serial-compact": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-sdn-serial-compact": {
 		Name:                "metal-ipi,amd64,sdn,ha,serial,compact",
 		Parallel:            false,
 		CSI:                 false,
@@ -1206,7 +1206,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-sdn-serial-ipv4": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-sdn-serial-ipv4": {
 		Name:                "metal-ipi,amd64,sdn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1214,7 +1214,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-sdn-serial-virtualmedia-bond": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-sdn-serial-virtualmedia-bond": {
 		Name:                "metal-ipi,amd64,sdn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1222,7 +1222,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-serial-ovn-dualstack": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-serial-ovn-dualstack": {
 		Name:                "metal-ipi,amd64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1230,7 +1230,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-serial-ovn-ipv6": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-serial-ovn-ipv6": {
 		Name:                "metal-ipi,amd64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1238,7 +1238,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ipi-upgrade-ovn-ipv6": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ipi-upgrade-ovn-ipv6": {
 		Name:                "metal-ipi,amd64,ovn,upgrade,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1246,7 +1246,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ovn-assisted": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ovn-assisted": {
 		Name:                "metal-upi,amd64,ovn,ha,assisted",
 		Parallel:            true,
 		CSI:                 false,
@@ -1254,7 +1254,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ovn-ipi-compact": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ovn-ipi-compact": {
 		Name:                "metal-upi,amd64,ovn,ha,compact",
 		Parallel:            true,
 		CSI:                 false,
@@ -1262,7 +1262,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ovn-single-node-live-iso": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ovn-single-node-live-iso": {
 		Name:                "metal-assisted,amd64,ovn,single-node",
 		Parallel:            true,
 		CSI:                 false,
@@ -1270,7 +1270,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-ovn-single-node-with-worker-live-iso": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-ovn-single-node-with-worker-live-iso": {
 		Name:                "metal-assisted,amd64,ovn,single-node",
 		Parallel:            true,
 		CSI:                 false,
@@ -1278,7 +1278,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-metal-sdn-assisted": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-metal-sdn-assisted": {
 		Name:                "metal-upi,amd64,sdn,ha,assisted",
 		Parallel:            true,
 		CSI:                 false,
@@ -1286,7 +1286,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-nutanix": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-nutanix": {
 		Name:                "amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1294,7 +1294,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-nutanix-ovn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-nutanix-ovn": {
 		Name:                "amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1302,7 +1302,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-ovirt-csi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-ovirt-csi": {
 		Name:                "ovirt,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -1310,7 +1310,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-ovirt-ovn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-ovirt-ovn": {
 		Name:                "ovirt,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1318,7 +1318,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-ovirt-sdn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-ovirt-sdn": {
 		Name:                "ovirt,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1326,7 +1326,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-telco5g": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-telco5g": {
 		Name:                "amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1334,7 +1334,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-telco5g-cnftests": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-telco5g-cnftests": {
 		Name:                "amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1342,7 +1342,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-8-ovn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-8-ovn": {
 		Name:                "vsphere-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1350,7 +1350,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-8-ovn-upi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-8-ovn-upi": {
 		Name:                "vsphere-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1358,7 +1358,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-ovn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-ovn": {
 		Name:                "vsphere-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1366,7 +1366,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-ovn-csi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-ovn-csi": {
 		Name:                "vsphere-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -1374,7 +1374,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-ovn-etcd-scaling": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-ovn-etcd-scaling": {
 		Name:                "vsphere-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1382,7 +1382,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-ovn-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-ovn-serial": {
 		Name:                "vsphere-ipi,amd64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1390,7 +1390,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-ovn-techpreview": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-ovn-techpreview": {
 		Name:                "vsphere-ipi,amd64,ovn,ha,techpreview",
 		Parallel:            true,
 		CSI:                 false,
@@ -1398,7 +1398,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-ovn-techpreview-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-ovn-techpreview-serial": {
 		Name:                "vsphere-ipi,amd64,ovn,ha,serial,techpreview",
 		Parallel:            false,
 		CSI:                 false,
@@ -1406,7 +1406,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-ovn-upi": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-ovn-upi": {
 		Name:                "vsphere-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1414,7 +1414,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-ovn-upi-serial": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-ovn-upi-serial": {
 		Name:                "vsphere-ipi,amd64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1422,7 +1422,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-e2e-vsphere-sdn": {
+	"periodic-ci-openshift-release-master-nightly-4.15-e2e-vsphere-sdn": {
 		Name:                "vsphere-ipi,amd64,sdn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1430,7 +1430,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-openshift-e2e-aws-ovn-single-node-workers-upgrade-conformance": {
+	"periodic-ci-openshift-release-master-nightly-4.15-openshift-e2e-aws-ovn-single-node-workers-upgrade-conformance": {
 		Name:                "aws,amd64,ovn,upgrade,upgrade-micro,single-node",
 		Parallel:            true,
 		CSI:                 false,
@@ -1438,7 +1438,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-upgrade-from-stable-4.13-e2e-aws-sdn-upgrade": {
+	"periodic-ci-openshift-release-master-nightly-4.15-upgrade-from-stable-4.14-e2e-aws-sdn-upgrade": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1446,7 +1446,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-upgrade-from-stable-4.13-e2e-aws-sdn-upgrade-paused": {
+	"periodic-ci-openshift-release-master-nightly-4.15-upgrade-from-stable-4.14-e2e-aws-sdn-upgrade-paused": {
 		Name:                "aws,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1454,7 +1454,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-upgrade-from-stable-4.13-e2e-aws-upgrade-ovn-single-node": {
+	"periodic-ci-openshift-release-master-nightly-4.15-upgrade-from-stable-4.14-e2e-aws-upgrade-ovn-single-node": {
 		Name:                "aws,amd64,ovn,upgrade,upgrade-minor,single-node",
 		Parallel:            true,
 		CSI:                 false,
@@ -1462,7 +1462,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-upgrade-from-stable-4.13-e2e-metal-ipi-sdn-bm-upgrade": {
+	"periodic-ci-openshift-release-master-nightly-4.15-upgrade-from-stable-4.14-e2e-metal-ipi-sdn-bm-upgrade": {
 		Name:                "metal-ipi,amd64,sdn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1470,7 +1470,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-release-master-nightly-4.14-upgrade-from-stable-4.13-e2e-metal-ipi-upgrade-ovn-ipv6": {
+	"periodic-ci-openshift-release-master-nightly-4.15-upgrade-from-stable-4.14-e2e-metal-ipi-upgrade-ovn-ipv6": {
 		Name:                "metal-ipi,amd64,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1478,7 +1478,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-openshift-verification-tests-master-installer-rehearse-4.14-installer-rehearse-azure": {
+	"periodic-ci-openshift-verification-tests-master-installer-rehearse-4.15-installer-rehearse-azure": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1494,7 +1494,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-additional-ipv6-network": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-additional-ipv6-network": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1502,7 +1502,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-az": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-az": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1510,7 +1510,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-csi-cinder": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-csi-cinder": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -1518,7 +1518,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-csi-manila": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-csi-manila": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -1526,7 +1526,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-fips": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-fips": {
 		Name:                "openstack,amd64,ovn,ha,fips",
 		Parallel:            true,
 		CSI:                 false,
@@ -1534,7 +1534,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-kuryr": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-kuryr": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1542,7 +1542,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-nfv-hwoffload": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-nfv-hwoffload": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1550,7 +1550,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-ovn": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-ovn": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1558,7 +1558,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-ovn-appcreds": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-ovn-appcreds": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1566,7 +1566,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-ovn-parallel": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-ovn-parallel": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1574,7 +1574,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-ovn-serial": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-ovn-serial": {
 		Name:                "openstack,amd64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1582,7 +1582,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-proxy": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-proxy": {
 		Name:                "openstack,amd64,ovn,ha,proxy",
 		Parallel:            true,
 		CSI:                 false,
@@ -1590,7 +1590,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-e2e-openstack-upi": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-e2e-openstack-upi": {
 		Name:                "openstack,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1598,7 +1598,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-upgrade-from-stable-4.13-e2e-openstack-kuryr-upgrade": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-upgrade-from-stable-4.14-e2e-openstack-kuryr-upgrade": {
 		Name:                "openstack,amd64,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1606,7 +1606,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.14-upgrade-from-stable-4.13-e2e-openstack-ovn-upgrade": {
+	"periodic-ci-shiftstack-shiftstack-ci-main-periodic-4.15-upgrade-from-stable-4.14-e2e-openstack-ovn-upgrade": {
 		Name:                "openstack,amd64,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1614,7 +1614,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"release-openshift-ocp-installer-e2e-aws-csi-4.14": {
+	"release-openshift-ocp-installer-e2e-aws-csi-4.15": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 true,
@@ -1622,7 +1622,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"release-openshift-ocp-installer-e2e-aws-mirrors-4.14": {
+	"release-openshift-ocp-installer-e2e-aws-mirrors-4.15": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1630,7 +1630,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"release-openshift-ocp-installer-e2e-aws-upi-4.14": {
+	"release-openshift-ocp-installer-e2e-aws-upi-4.15": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1638,7 +1638,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"release-openshift-ocp-installer-e2e-azure-serial-4.14": {
+	"release-openshift-ocp-installer-e2e-azure-serial-4.15": {
 		Name:                "azure,amd64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1646,7 +1646,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"release-openshift-ocp-installer-e2e-gcp-serial-4.14": {
+	"release-openshift-ocp-installer-e2e-gcp-serial-4.15": {
 		Name:                "gcp,amd64,ovn,ha,serial",
 		Parallel:            false,
 		CSI:                 false,
@@ -1654,7 +1654,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              true,
 	},
-	"release-openshift-ocp-osd-aws-nightly-4.14": {
+	"release-openshift-ocp-osd-aws-nightly-4.15": {
 		Name:                "aws,amd64,ovn,ha,osd",
 		Parallel:            true,
 		CSI:                 false,
@@ -1662,7 +1662,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"release-openshift-ocp-osd-gcp-nightly-4.14": {
+	"release-openshift-ocp-osd-gcp-nightly-4.15": {
 		Name:                "gcp,amd64,ovn,ha,osd",
 		Parallel:            true,
 		CSI:                 false,
@@ -1670,7 +1670,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"release-openshift-origin-installer-e2e-aws-disruptive-4.14": {
+	"release-openshift-origin-installer-e2e-aws-disruptive-4.15": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1678,7 +1678,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"release-openshift-origin-installer-e2e-aws-shared-vpc-4.14": {
+	"release-openshift-origin-installer-e2e-aws-shared-vpc-4.15": {
 		Name:                "aws,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1686,7 +1686,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"release-openshift-origin-installer-e2e-aws-upgrade-4.11-to-4.12-to-4.13-to-4.14-ci": {
+	"release-openshift-origin-installer-e2e-aws-upgrade-4.12-to-4.13-to-4.14-to-4.15-ci": {
 		Name:                "aws,amd64,ovn,upgrade,upgrade-minor,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1694,7 +1694,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  true,
 		Serial:              false,
 	},
-	"release-openshift-origin-installer-e2e-azure-shared-vpc-4.14": {
+	"release-openshift-origin-installer-e2e-azure-shared-vpc-4.15": {
 		Name:                "azure,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
@@ -1702,7 +1702,7 @@ var Variants = map[string]internal.Variant{
 		UpgradeFromCurrent:  false,
 		Serial:              false,
 	},
-	"release-openshift-origin-installer-e2e-gcp-shared-vpc-4.14": {
+	"release-openshift-origin-installer-e2e-gcp-shared-vpc-4.15": {
 		Name:                "gcp,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
