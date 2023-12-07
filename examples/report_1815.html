@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<html>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+th, td {
+  text-align: left;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.success {
+  background-color: rgb(122, 190, 122);
+}
+
+.failure {
+  background-color: rgb(241, 149, 149);
+}
+
+.empty {
+  background-color: #f8f8f8;
+  color: #bbbbbb;
+}
+
+</style>
+<body>
+
+<h2>Test Matrix: <a href=https://github.com/openshift/kubernetes/pull/1815>openshift/kubernetes#1815</a></h2>
+
+<table>
+  <tr>
+    <th>Variant</th>
+    <th>Install Status</th>
+    <th>Upgrade from current</th>
+    <th>Upgrade from previous</th>
+    <th>Serial</th>
+    <th>Parallel</th>
+    <th>CSI</th>
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,hypershift</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/openshift-kubernetes-1815-periodics-e2e-aws-ovn/1732507116519821312">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,serial</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td>
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/openshift-kubernetes-1815-nightly-4.15-e2e-aws-ovn-serial/1732507159243001856">error</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,upgrade,upgrade-micro,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/origin-ci-test/logs/openshift-kubernetes-1815-ci-4.15-e2e-aws-ovn-upgrade/1732507160325132288/artifacts/e2e-aws-ovn-upgrade/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/openshift-kubernetes-1815-ci-4.15-e2e-aws-ovn-upgrade/1732507160325132288">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/openshift-kubernetes-1815-ci-4.15-e2e-aws-ovn-upgrade/1732507160325132288">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,upgrade,upgrade-minor,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-ovn-upgrade/1732507096898867200">failure</a>
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-ovn-upgrade/1732507096898867200">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-aws-ovn-upgrade/1732507096898867200">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,sdn,ha,serial</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td>
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/openshift-kubernetes-1815-ci-4.15-e2e-aws-sdn-serial/1732507115735486464">error</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,sdn,upgrade,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-sdn-upgrade/1732507129169842176">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-nightly-4.15-e2e-aws-sdn-upgrade/1732507129169842176">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>azure,amd64,ovn,upgrade,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-e2e-azure-ovn-upgrade/1732507139315863552">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-e2e-azure-ovn-upgrade/1732507139315863552">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>azure,amd64,sdn,upgrade,upgrade-minor,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-azure-sdn-upgrade/1732507103035133952">failure</a>
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-azure-sdn-upgrade/1732507103035133952">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-azure-sdn-upgrade/1732507103035133952">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,upgrade,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-ovn-upgrade/1732507115366387712">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-e2e-gcp-ovn-upgrade/1732507115366387712">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,upgrade,upgrade-minor,ha,realtime</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-gcp-ovn-rt-upgrade/1732507149172477952">failure</a>
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-gcp-ovn-rt-upgrade/1732507149172477952">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/aggregator-periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-gcp-ovn-rt-upgrade/1732507149172477952">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,ovn,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/origin-ci-test/logs/openshift-kubernetes-1815-nightly-4.15-e2e-metal-ipi-ovn-ipv6/1732507161122050048/artifacts/e2e-metal-ipi-ovn-ipv6/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/openshift-kubernetes-1815-nightly-4.15-e2e-metal-ipi-ovn-ipv6/1732507161122050048">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,sdn,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/origin-ci-test/logs/openshift-kubernetes-1815-nightly-4.15-e2e-metal-ipi-sdn-bm/1732507161860247552/artifacts/e2e-metal-ipi-sdn-bm/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/origin-ci-test/logs/openshift-kubernetes-1815-nightly-4.15-e2e-metal-ipi-sdn-bm/1732507161860247552">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+</table>
+
+<p><small>Report generated on 2023-12-07 at 12:05 UTC</small></p>
+
+</body>
+</html>
+
