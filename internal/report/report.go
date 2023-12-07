@@ -13,18 +13,22 @@ import (
 )
 
 type Report struct {
-	title  string
-	url    string
-	tmpl   *template.Template
-	matrix map[string]internal.Entry
+	title       string
+	url         string
+	tmpl        *template.Template
+	matrix      map[string]internal.Entry
+	version     string
+	prevVersion string
 }
 
-func New(org, repo string, prID int) *Report {
+func New(curVer, prevVer string, org, repo string, prID int) *Report {
 	return &Report{
-		title:  fmt.Sprintf("%s/%s#%d", org, repo, prID),
-		url:    fmt.Sprintf("https://github.com/%s/%s/pull/%d", org, repo, prID),
-		matrix: make(map[string]internal.Entry, 128),
-		tmpl:   template.Must(template.New("").ParseFS(html.FS, "*.tmpl")),
+		title:       fmt.Sprintf("%s/%s#%d", org, repo, prID),
+		url:         fmt.Sprintf("https://github.com/%s/%s/pull/%d", org, repo, prID),
+		matrix:      make(map[string]internal.Entry, 128),
+		tmpl:        template.Must(template.New("").ParseFS(html.FS, "*.tmpl")),
+		version:     curVer,
+		prevVersion: prevVer,
 	}
 }
 
