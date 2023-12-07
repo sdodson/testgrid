@@ -1,8 +1,8 @@
-# testgrid 
+# testgrid
 
 ```sh
 $ go install github.com/bertinatto/testgrid@latest
-$ testgrid -pr openshift/kubernetes#1558 
+$ testgrid -ocp-version 4.14 -pr openshift/kubernetes#1558
 $ $BROWSER report.html
 ```
 

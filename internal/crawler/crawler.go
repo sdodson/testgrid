@@ -21,10 +21,12 @@ type Crawler struct {
 	repo          string
 	pullRequestID int
 	data          map[string][]*internal.ProwJob
+	cacheDir      string
 	collector     *colly.Collector
+	ocpVersion    string
 }
 
-func New(org, repo string, prID int) *Crawler {
+func New(org, repo string, prID int, ocpVersion string, cacheDir string) *Crawler {
 	allowedDomains := []string{
 		"github.com",
 		"api.github.com",
@@ -35,8 +37,10 @@ func New(org, repo string, prID int) *Crawler {
 		org:           org,
 		repo:          repo,
 		pullRequestID: prID,
+		ocpVersion:    ocpVersion,
 		data:          make(map[string][]*internal.ProwJob, 128),
-		collector:     newCollector(allowedDomains...),
+		cacheDir:      cacheDir,
+		collector:     newCollector(cacheDir, allowedDomains...),
 	}
 }
 
@@ -51,7 +55,7 @@ func (c *Crawler) Do() map[string][]*internal.ProwJob {
 
 func (c *Crawler) parsePR() []string {
 	payloadJobs := sets.NewString()
-	collector := newCollector("github.com", "api.github.com")
+	collector := newCollector(c.cacheDir, "github.com", "api.github.com")
 
 	// Create a callback that will be called once we visit the PR page.
 	collector.OnResponse(func(r *colly.Response) {
@@ -81,6 +85,7 @@ func (c *Crawler) parsePR() []string {
 	})
 
 	// Finally, visit the PR page (through the API).
+	// TODO: add pagination, otherwise it won't be possible to scrape more than 100 jobs.
 	collector.Visit(fmt.Sprintf("https://api.github.com/repos/%s/%s/issues/%d/comments?per_page=100", c.org, c.repo, c.pullRequestID))
 
 	return payloadJobs.List()
@@ -89,7 +94,7 @@ func (c *Crawler) parsePR() []string {
 func (c *Crawler) parsePayloadJobs(urls []string) ([]string, []string) {
 	prowJobsURLs := []string{}
 	finishedURLs := []string{}
-	collector := newCollector("pr-payload-tests.ci.openshift.org")
+	collector := newCollector(c.cacheDir, "pr-payload-tests.ci.openshift.org")
 
 	// Create a callback that will be called once we visit payload job page.
 	collector.OnHTML("li", func(e *colly.HTMLElement) {
@@ -99,6 +104,11 @@ func (c *Crawler) parsePayloadJobs(urls []string) ([]string, []string) {
 
 			// We are only interested in prow jobs URLs.
 			if !strings.HasPrefix(href, "https://prow.ci.openshift.org/") {
+				return
+			}
+
+			// We are only interested in the current OCP version.
+			if !strings.Contains(jobName, c.ocpVersion) {
 				return
 			}
 
@@ -135,7 +145,7 @@ func (c *Crawler) parsePayloadJobs(urls []string) ([]string, []string) {
 }
 
 func (c *Crawler) parseFinishedJSON(urls []string) {
-	collector := newCollector("gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com")
+	collector := newCollector(c.cacheDir, "gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com")
 
 	// Before visiting prow job pages, create a callback that will be called for every visited page.
 	collector.OnResponse(func(r *colly.Response) {
@@ -164,7 +174,7 @@ func (c *Crawler) parseFinishedJSON(urls []string) {
 }
 
 func (c *Crawler) parseInstallTXT(urls []string) {
-	collector := newCollector("gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com")
+	collector := newCollector(c.cacheDir, "gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com")
 
 	// Before visiting prow job pages, create a callback that will be called for every visited page.
 	collector.OnResponse(func(r *colly.Response) {
@@ -204,7 +214,7 @@ func (c *Crawler) parseInstallTXT(urls []string) {
 
 func (c *Crawler) parseProwJobsURLs(urls []string) []string {
 	installURLs := []string{}
-	collector := newCollector("prow.ci.openshift.org")
+	collector := newCollector(c.cacheDir, "prow.ci.openshift.org")
 
 	// Before visiting prow job pages, create a callback that will be called for every visited page.
 	collector.OnResponse(func(r *colly.Response) {
@@ -260,11 +270,10 @@ func (c *Crawler) parseProwJobsURLs(urls []string) []string {
 	return installURLs
 }
 
-func newCollector(allowed ...string) *colly.Collector {
+func newCollector(cacheDir string, allowed ...string) *colly.Collector {
 	c := colly.NewCollector(
 		colly.AllowedDomains(allowed...),
-		// FIXME: add mechanism to disable
-		colly.CacheDir("/tmp/testgrid_cache"),
+		colly.CacheDir(cacheDir),
 	)
 
 	// Create a callback that will run before every request made.

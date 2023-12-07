@@ -15,8 +15,16 @@ import (
 
 func main() {
 	prFlag := flag.String("pr", "", "pull request in the format 'org/repo#prID'")
+	ocpVersionFlag := flag.String("ocp-version", "", "ocp version to match jobs against (example: 4.15)")
 	outputFlag := flag.String("output", "report.html", "specify the output file for the report (default: report.html)")
+	cacheDirFlag := flag.String("cache-dir", "", "specify the directory where scraped data should be cached (default: no cache)")
 	flag.Parse()
+
+	if *ocpVersionFlag == "" {
+		flag.PrintDefaults()
+		fmt.Fprintf(os.Stderr, "ERROR: OCP version cannot be empty.\n")
+		os.Exit(1)
+	}
 
 	if *outputFlag == "" {
 		flag.PrintDefaults()
@@ -28,7 +36,7 @@ func main() {
 	re := regexp.MustCompile(`^(\w+)/(\w+)#(\d+)$`)
 	matches := re.FindStringSubmatch(*prFlag)
 	if len(matches) < 3 {
-		fmt.Fprintf(os.Stderr, "ERROR Invalid input format %q. Expected: 'org/repo#pr\n", *prFlag)
+		fmt.Fprintf(os.Stderr, "ERROR: Invalid input format %q. Expected: 'org/repo#pr\n", *prFlag)
 		flag.PrintDefaults()
 		os.Exit(1)
 	}
@@ -41,8 +49,18 @@ func main() {
 		os.Exit(1)
 	}
 
-	jobs := crawler.New(org, repo, prID).Do()
-	report := report.New(org, repo, prID)
+	// Extract current and previous OCP versions
+	v, err := strconv.ParseFloat(*ocpVersionFlag, 32)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "ERROR: Cannot parse OCP version: %s\n", *ocpVersionFlag)
+		flag.PrintDefaults()
+		os.Exit(1)
+	}
+	curVer := fmt.Sprintf("%.2f", v)
+	prevVer := fmt.Sprintf("%.2f", v-0.01)
+
+	jobs := crawler.New(org, repo, prID, curVer, *cacheDirFlag).Do()
+	report := report.New(curVer, prevVer, org, repo, prID)
 	err = report.Create(jobs)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "ERROR: Failed to create report: %v", err)
