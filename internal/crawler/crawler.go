@@ -102,11 +102,6 @@ func (c *Crawler) parsePayloadJobs(urls []string) ([]string, []string) {
 			jobName := el.ChildText("span")
 			href := el.ChildAttr("a", "href")
 
-			// We are only interested in prow jobs URLs.
-			if !strings.HasPrefix(href, "https://prow.ci.openshift.org/") {
-				return
-			}
-
 			// We are only interested in the current OCP version.
 			if !strings.Contains(jobName, c.ocpVersion) {
 				return
