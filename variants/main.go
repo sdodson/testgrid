@@ -72,12 +72,20 @@ func readTSVFile(filename string) (map[string]internal.Variant, error) {
 		extendedVariants := line[2]
 
 		extVarSplit := strings.Split(extendedVariants, ",")
+
+		upgradeFromCurrent := contains(extVarSplit, "upgrade-micro")
+		upgradeFromPrevious := contains(extVarSplit, "upgrade-minor")
+
+		if upgradeFromCurrent && upgradeFromPrevious {
+			return nil, fmt.Errorf("line %d contains both upgrade-micro and upgrade-minor", i)
+		}
+
 		v := internal.Variant{
 			Name:                variants,
 			Parallel:            contains(extVarSplit, "parallel"),
 			CSI:                 contains(extVarSplit, "csi"),
-			UpgradeFromCurrent:  contains(extVarSplit, "upgrade"),
-			UpgradeFromPrevious: contains(extVarSplit, "upgrade-minor"),
+			UpgradeFromCurrent:  upgradeFromCurrent,
+			UpgradeFromPrevious: upgradeFromPrevious,
 			Serial:              contains(extVarSplit, "serial"),
 		}
 
