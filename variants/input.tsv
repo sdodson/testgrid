@@ -29,6 +29,8 @@ periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-azure-
 periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-gcp-ovn-rt-upgrade	gcp,amd64,ovn,upgrade-minor,ha,realtime	gcp,amd64,ovn,upgrade-minor,ha,realtime,parallel,rt
 periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-gcp-ovn-upgrade	gcp,amd64,ovn,upgrade-minor,ha	gcp,amd64,ovn,upgrade-minor,ha,parallel
 periodic-ci-openshift-release-master-ci-4.15-upgrade-from-stable-4.14-e2e-gcp-sdn-upgrade	gcp,amd64,sdn,upgrade-minor,ha	gcp,amd64,sdn,upgrade-minor,ha,parallel
+periodic-ci-openshift-release-master-cnv-nightly-4.15-e2e-azure-deploy-cnv	azure,amd64,ovn,ha	azure,amd64,ovn,ha,parallel
+periodic-ci-openshift-release-master-cnv-nightly-4.15-e2e-azure-upgrade-cnv	azure,amd64,ovn,upgrade-micro,ha	azure,amd64,ovn,upgrade-micro,ha,parallel
 periodic-ci-openshift-release-master-nightly-4.15-console-aws	aws,amd64,ovn,ha	aws,amd64,ovn,ha,parallel,console
 periodic-ci-openshift-release-master-nightly-4.15-e2e-agent-compact-ipv4	agent,ovn,ha 	agent,ovn,ha,parallel
 periodic-ci-openshift-release-master-nightly-4.15-e2e-agent-ha-dualstack	agent,ovn,ha 	agent,ovn,ha,parallel
@@ -106,6 +108,8 @@ periodic-ci-openshift-release-master-ci-4.16-upgrade-from-stable-4.15-e2e-azure-
 periodic-ci-openshift-release-master-ci-4.16-upgrade-from-stable-4.15-e2e-gcp-ovn-rt-upgrade	gcp,amd64,ovn,upgrade-minor,ha,realtime	gcp,amd64,ovn,upgrade-minor,ha,realtime,parallel,rt
 periodic-ci-openshift-release-master-ci-4.16-upgrade-from-stable-4.15-e2e-gcp-ovn-upgrade	gcp,amd64,ovn,upgrade-minor,ha	gcp,amd64,ovn,upgrade-minor,ha,parallel
 periodic-ci-openshift-release-master-ci-4.16-upgrade-from-stable-4.15-e2e-gcp-sdn-upgrade	gcp,amd64,sdn,upgrade-minor,ha	gcp,amd64,sdn,upgrade-minor,ha,parallel
+periodic-ci-openshift-release-master-cnv-nightly-4.16-e2e-azure-deploy-cnv	azure,amd64,ovn,ha	azure,amd64,ovn,ha,parallel
+periodic-ci-openshift-release-master-cnv-nightly-4.16-e2e-azure-upgrade-cnv	azure,amd64,ovn,upgrade-micro,ha	azure,amd64,ovn,upgrade-micro,ha,parallel
 periodic-ci-openshift-release-master-nightly-4.16-console-aws	aws,amd64,ovn,ha	aws,amd64,ovn,ha,parallel,console
 periodic-ci-openshift-release-master-nightly-4.16-e2e-agent-compact-ipv4	agent,ovn,ha 	agent,ovn,ha,parallel
 periodic-ci-openshift-release-master-nightly-4.16-e2e-agent-ha-dualstack	agent,ovn,ha 	agent,ovn,ha,parallel
