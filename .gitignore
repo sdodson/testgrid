@@ -25,3 +25,6 @@ report.html
 
 # Binary
 _output
+
+# vendor
+vendor/
