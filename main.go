@@ -33,7 +33,7 @@ func main() {
 	}
 
 	// Extract organization, repository, and pull request ID
-	re := regexp.MustCompile(`^(\w+)/(\w+)#(\d+)$`)
+	re := regexp.MustCompile(`^([\w|-]+)/([\w|-]+)#(\d+)$`)
 	matches := re.FindStringSubmatch(*prFlag)
 	if len(matches) < 3 {
 		fmt.Fprintf(os.Stderr, "ERROR: Invalid input format %q. Expected: 'org/repo#pr\n", *prFlag)
