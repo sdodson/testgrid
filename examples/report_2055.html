@@ -1,0 +1,1761 @@
+
+
+<!DOCTYPE html>
+<html>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+th, td {
+  text-align: left;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.success {
+  background-color: rgb(122, 190, 122);
+}
+
+.failure {
+  background-color: rgb(241, 149, 149);
+}
+
+.empty {
+  background-color: #f8f8f8;
+  color: #bbbbbb;
+}
+
+</style>
+<body>
+
+<h2>Test Matrix: <a href=https://github.com/openshift/kubernetes/pull/2055>openshift/kubernetes#2055</a></h2>
+
+<table>
+  <tr>
+    <th>Variant</th>
+    <th>Install Status</th>
+    <th>Upgrade from current</th>
+    <th>Upgrade from previous</th>
+    <th>Serial</th>
+    <th>Parallel</th>
+    <th>CSI</th>
+  </tr>
+  
+  <tr>
+    <td>agent,ovn</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-agent-single-node-ipv6/1828363085199446016">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>agent,ovn,ha </td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>amd64,ovn,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-telco5g/1828363255307833344">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-driver-toolkit/1828363168070504448/artifacts/e2e-aws-driver-toolkit/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-aws-ovn/1828363116056940544">success</a>
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-csi/1828363113552941056">success</a>
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,fips</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-fips/1828363121094299648/artifacts/e2e-aws-ovn-fips/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-fips/1828363121094299648">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,hypershift</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-periodics-e2e-aws-ovn/1828177813404913664">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,osd</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-osd-aws/1828363239369478144">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,proxy</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-proxy/1828363248596946944/artifacts/e2e-aws-ovn-proxy/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-proxy/1828363248596946944">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,rosa</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-rosa-classic-sts/1828363253630111744">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,serial</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-serial/1828177924965011456/artifacts/e2e-aws-ovn-serial/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-serial/1828177924965011456">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,serial,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-aws-ovn-techpreview-serial/1828363144574013440/artifacts/e2e-aws-ovn-techpreview-serial/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-aws-ovn-techpreview-serial/1828363144574013440">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,single-node</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-single-node-csi/1828363126962130944/artifacts/e2e-aws-ovn-single-node-csi/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-single-node-csi/1828363126962130944">success</a>
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-single-node-csi/1828363126962130944">success</a>
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-aws-ovn-techpreview/1828363142053236736/artifacts/e2e-aws-ovn-techpreview/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-aws-ovn-techpreview/1828363142053236736">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,single-node</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-single-node/1828363124445548544/artifacts/e2e-aws-ovn-single-node/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-single-node/1828363124445548544">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,single-node,serial</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,single-node,serial,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-single-node-techpreview-serial/1828363134507683840/artifacts/e2e-aws-ovn-single-node-techpreview-serial/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-single-node-techpreview-serial/1828363134507683840">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,single-node,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-single-node-techpreview/1828363132020461568/artifacts/e2e-aws-ovn-single-node-techpreview/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,single-node,upgrade-micro</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-aws-ovn-upgrade-out-of-change/1828363147094790144">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-aws-ovn-upgrade-out-of-change/1828363147094790144">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,upgrade-micro,ha,single-node</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,upgrade-minor,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-upgrade-from-stable-4.17-e2e-aws-ovn-upgrade/1828177749622132736">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-upgrade-from-stable-4.17-e2e-aws-ovn-upgrade/1828177749622132736">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,sdn,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-cgroupsv2/1828363118565134336/artifacts/e2e-aws-ovn-cgroupsv2/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-aws-ovn-cgroupsv2/1828363118565134336">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>azure,amd64,ovn,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-cnv-nightly-4.18-e2e-azure-deploy-cnv/1828363164710866944">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>azure,amd64,ovn,ha,serial,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-azure-ovn-techpreview-serial/1828363161355423744/artifacts/e2e-azure-ovn-techpreview-serial/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-azure-ovn-techpreview-serial/1828363161355423744">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>azure,amd64,ovn,ha,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-azure-ovn-techpreview/1828363158843035648/artifacts/e2e-azure-ovn-techpreview/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-azure-ovn-techpreview/1828363158843035648">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>azure,amd64,ovn,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-e2e-azure-ovn-upgrade/1828177872146141184">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-e2e-azure-ovn-upgrade/1828177872146141184">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>azure,amd64,ovn,upgrade-minor,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-upgrade-from-stable-4.17-e2e-azure-ovn-upgrade/1828177784850092032">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-upgrade-from-stable-4.17-e2e-azure-ovn-upgrade/1828177784850092032">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-gcp-ovn/1828363175624445952/artifacts/e2e-gcp-ovn/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-gcp-ovn/1828363175624445952">success</a>
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-gcp-ovn-csi/1828363178132639744">success</a>
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,ha,osd</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-conformance-osd-gcp/1828363246080364544">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,ha,realtime</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-gcp-ovn-rt/1828363180649222144/artifacts/e2e-gcp-ovn-rt/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,ha,serial</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,ha,serial,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-gcp-ovn-techpreview-serial/1828363188198969344/artifacts/e2e-gcp-ovn-techpreview-serial/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-gcp-ovn-techpreview-serial/1828363188198969344">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,ha,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-gcp-ovn-techpreview/1828363185728524288/artifacts/e2e-gcp-ovn-techpreview/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-e2e-gcp-ovn-techpreview/1828363185728524288">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-e2e-gcp-ovn-upgrade/1828177811697831936">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-e2e-gcp-ovn-upgrade/1828177811697831936">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,upgrade-minor,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64ovn,upgrade-minor,ha,realtime</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-upgrade-from-stable-4.17-e2e-gcp-ovn-rt-upgrade/1828177898943549440">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.18-upgrade-from-stable-4.17-e2e-gcp-ovn-rt-upgrade/1828177898943549440">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-assisted,amd64,ovn,single-node</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-metal-ovn-single-node-live-iso/1828363251952390144">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,ovn,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-metal-ipi-ovn-ipv6/1828177934188285952/artifacts/e2e-metal-ipi-ovn-ipv6/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,ovn,ha,serial</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,ovn,ha,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-metal-ipi-ovn-ipv6-techpreview/1828363213385764864/artifacts/e2e-metal-ipi-ovn-ipv6-techpreview/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-metal-ipi-ovn-ipv6-techpreview/1828363213385764864">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,ovn,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,ovn,upgrade-minor,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,sdn,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-metal-ipi-ovn-bm/1828177932502175744/artifacts/e2e-metal-ipi-ovn-bm/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-metal-ipi-ovn-bm/1828177932502175744">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,sdn,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-upi,amd64,ovn,ha,assisted</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-metal-ovn-assisted/1828363235179368448">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>vsphere,amd64,ovn,upgrade-minor,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-upgrade-from-stable-4.17-e2e-vsphere-ovn-upgrade/1828363271254577152/artifacts/e2e-vsphere-ovn-upgrade/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-upgrade-from-stable-4.17-e2e-vsphere-ovn-upgrade/1828363271254577152">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-ci-4.18-upgrade-from-stable-4.17-e2e-vsphere-ovn-upgrade/1828363271254577152">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>vsphere-ipi,amd64,ovn,ha</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-vsphere-ovn/1828363260475215872/artifacts/e2e-vsphere-ovn/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-vsphere-ovn/1828363260475215872">success</a>
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-vsphere-ovn-csi/1828363262056468480">success</a>
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>vsphere-ipi,amd64,ovn,ha,serial</td>
+    
+    <td class="success" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-vsphere-ovn-upi-serial/1828363277155962880/artifacts/e2e-vsphere-ovn-upi-serial/gather-must-gather/artifacts/install-status.txt">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-vsphere-ovn-serial/1828363265374162944">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>vsphere-ipi,amd64,ovn,ha,serial,techpreview</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-vsphere-ovn-techpreview-serial/1828363268746383360">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>vsphere-ipi,amd64,ovn,ha,techpreview</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-kubernetes-2055-nightly-4.18-e2e-vsphere-ovn-techpreview/1828363267051884544">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+</table>
+
+<p><small>Report generated on 2024-08-27 at 12:49 UTC</small></p>
+
+</body>
+</html>
+
