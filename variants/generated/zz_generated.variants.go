@@ -1911,7 +1911,7 @@ var Variants = map[string]internal.Variant{
 		Serial:              true,
 	},
 	"periodic-ci-openshift-release-master-nightly-4.17-e2e-metal-ipi-ovn-bm": {
-		Name:                "metal-ipi,amd64,sdn,ha",
+		Name:                "metal-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
 		UpgradeFromPrevious: false,
@@ -1919,7 +1919,7 @@ var Variants = map[string]internal.Variant{
 		Serial:              false,
 	},
 	"periodic-ci-openshift-release-master-nightly-4.17-e2e-metal-ipi-ovn-bm-upgrade": {
-		Name:                "metal-ipi,amd64,sdn,upgrade-micro,ha",
+		Name:                "metal-ipi,amd64,ovn,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
 		UpgradeFromPrevious: false,
@@ -2263,7 +2263,7 @@ var Variants = map[string]internal.Variant{
 		Serial:              true,
 	},
 	"periodic-ci-openshift-release-master-nightly-4.18-e2e-metal-ipi-ovn-bm": {
-		Name:                "metal-ipi,amd64,sdn,ha",
+		Name:                "metal-ipi,amd64,ovn,ha",
 		Parallel:            true,
 		CSI:                 false,
 		UpgradeFromPrevious: false,
@@ -2271,7 +2271,7 @@ var Variants = map[string]internal.Variant{
 		Serial:              false,
 	},
 	"periodic-ci-openshift-release-master-nightly-4.18-e2e-metal-ipi-ovn-bm-upgrade": {
-		Name:                "metal-ipi,amd64,sdn,upgrade-micro,ha",
+		Name:                "metal-ipi,amd64,ovn,upgrade-micro,ha",
 		Parallel:            true,
 		CSI:                 false,
 		UpgradeFromPrevious: false,

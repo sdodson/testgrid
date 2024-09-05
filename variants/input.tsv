@@ -204,8 +204,8 @@ periodic-ci-openshift-release-master-nightly-4.17-e2e-azure-csi	azure,amd64,ovn,
 periodic-ci-openshift-release-master-nightly-4.17-e2e-gcp-ovn-csi	gcp,amd64,ovn,ha	gcp,amd64,ovn,ha,parallel,csi
 periodic-ci-openshift-release-master-nightly-4.17-e2e-gcp-ovn-rt	gcp,amd64,ovn,ha,realtime	gcp,amd64,ovn,ha,realtime,parallel,rt
 periodic-ci-openshift-release-master-nightly-4.17-e2e-gcp-ovn-serial	gcp,amd64,ovn,ha,serial	gcp,amd64,ovn,ha,serial
-periodic-ci-openshift-release-master-nightly-4.17-e2e-metal-ipi-ovn-bm	metal-ipi,amd64,sdn,ha	metal-ipi,amd64,sdn,ha,parallel,metal,ipi
-periodic-ci-openshift-release-master-nightly-4.17-e2e-metal-ipi-ovn-bm-upgrade	metal-ipi,amd64,sdn,upgrade-micro,ha	metal-ipi,amd64,sdn,upgrade-micro,ha,parallel,metal,ipi
+periodic-ci-openshift-release-master-nightly-4.17-e2e-metal-ipi-ovn-bm	metal-ipi,amd64,ovn,ha	metal-ipi,amd64,ovn,ha,parallel,metal,ipi
+periodic-ci-openshift-release-master-nightly-4.17-e2e-metal-ipi-ovn-bm-upgrade	metal-ipi,amd64,ovn,upgrade-micro,ha	metal-ipi,amd64,ovn,upgrade-micro,ha,parallel,metal,ipi
 periodic-ci-openshift-release-master-nightly-4.17-e2e-metal-ipi-ovn-dualstack	metal-ipi,amd64,ovn,ha	metal-ipi,amd64,ovn,ha,parallel,metal,ipi
 periodic-ci-openshift-release-master-nightly-4.17-e2e-metal-ipi-ovn-ipv6	metal-ipi,amd64,ovn,ha	metal-ipi,amd64,ovn,ha,parallel,ipv6,metal,ipi
 periodic-ci-openshift-release-master-nightly-4.17-e2e-metal-ipi-ovn-serial-ipv4	metal-ipi,amd64,ovn,ha,serial	metal-ipi,amd64,ovn,ha,serial,metal,ipi
@@ -274,8 +274,8 @@ periodic-ci-openshift-release-master-nightly-4.18-e2e-azure-csi	azure,amd64,ovn,
 periodic-ci-openshift-release-master-nightly-4.18-e2e-gcp-ovn-csi	gcp,amd64,ovn,ha	gcp,amd64,ovn,ha,parallel,csi
 periodic-ci-openshift-release-master-nightly-4.18-e2e-gcp-ovn-rt	gcp,amd64,ovn,ha,realtime	gcp,amd64,ovn,ha,realtime,parallel,rt
 periodic-ci-openshift-release-master-nightly-4.18-e2e-gcp-ovn-serial	gcp,amd64,ovn,ha,serial	gcp,amd64,ovn,ha,serial
-periodic-ci-openshift-release-master-nightly-4.18-e2e-metal-ipi-ovn-bm	metal-ipi,amd64,sdn,ha	metal-ipi,amd64,sdn,ha,parallel,metal,ipi
-periodic-ci-openshift-release-master-nightly-4.18-e2e-metal-ipi-ovn-bm-upgrade	metal-ipi,amd64,sdn,upgrade-micro,ha	metal-ipi,amd64,sdn,upgrade-micro,ha,parallel,metal,ipi
+periodic-ci-openshift-release-master-nightly-4.18-e2e-metal-ipi-ovn-bm	metal-ipi,amd64,ovn,ha	metal-ipi,amd64,ovn,ha,parallel,metal,ipi
+periodic-ci-openshift-release-master-nightly-4.18-e2e-metal-ipi-ovn-bm-upgrade	metal-ipi,amd64,ovn,upgrade-micro,ha	metal-ipi,amd64,ovn,upgrade-micro,ha,parallel,metal,ipi
 periodic-ci-openshift-release-master-nightly-4.18-e2e-metal-ipi-ovn-dualstack	metal-ipi,amd64,ovn,ha	metal-ipi,amd64,ovn,ha,parallel,metal,ipi
 periodic-ci-openshift-release-master-nightly-4.18-e2e-metal-ipi-ovn-ipv6	metal-ipi,amd64,ovn,ha	metal-ipi,amd64,ovn,ha,parallel,ipv6,metal,ipi
 periodic-ci-openshift-release-master-nightly-4.18-e2e-metal-ipi-ovn-serial-ipv4	metal-ipi,amd64,ovn,ha,serial	metal-ipi,amd64,ovn,ha,serial,metal,ipi
