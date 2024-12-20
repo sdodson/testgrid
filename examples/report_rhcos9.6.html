@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<html>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+th, td {
+  text-align: left;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.success {
+  background-color: rgb(122, 190, 122);
+}
+
+.failure {
+  background-color: rgb(241, 149, 149);
+}
+
+.empty {
+  background-color: #f8f8f8;
+  color: #bbbbbb;
+}
+
+</style>
+<body>
+
+<h2>Test Matrix: <a href=https://github.com/openshift/machine-config-operator/pull/4759>openshift/machine-config-operator#4759</a></h2>
+
+<table>
+  <tr>
+    <th>Variant</th>
+    <th>Install Status</th>
+    <th>Upgrade from current</th>
+    <th>Upgrade from previous</th>
+    <th>Serial</th>
+    <th>Parallel</th>
+    <th>CSI</th>
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,fips</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-machine-config-operator-4759-nightly-4.19-fips-payload-scan/1869093816313581568/artifacts/fips-payload-scan/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-machine-config-operator-4759-nightly-4.19-fips-payload-scan/1869093816313581568">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,hypershift</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,serial</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-machine-config-operator-4759-nightly-4.19-e2e-aws-ovn-serial/1869093803348987904/artifacts/e2e-aws-ovn-serial/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-machine-config-operator-4759-nightly-4.19-e2e-aws-ovn-serial/1869093803348987904">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,serial,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-machine-config-operator-4759-ci-4.19-e2e-aws-ovn-techpreview-serial/1869093811985059840/artifacts/e2e-aws-ovn-techpreview-serial/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-machine-config-operator-4759-ci-4.19-e2e-aws-ovn-techpreview-serial/1869093811985059840">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,ha,techpreview</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-machine-config-operator-4759-ci-4.19-e2e-aws-ovn-techpreview/1869093807664926720/artifacts/e2e-aws-ovn-techpreview/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-machine-config-operator-4759-ci-4.19-e2e-aws-ovn-techpreview/1869093807664926720">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,single-node,upgrade-micro</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-e2e-aws-upgrade-ovn-single-node/1868862420965920768">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-e2e-aws-upgrade-ovn-single-node/1868862420965920768">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-e2e-aws-ovn-upgrade/1868862467694661632">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-e2e-aws-ovn-upgrade/1868862467694661632">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>aws,amd64,ovn,upgrade-minor,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-upgrade-from-stable-4.18-e2e-aws-ovn-upgrade/1868862689443319808">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-upgrade-from-stable-4.18-e2e-aws-ovn-upgrade/1868862689443319808">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>azure,amd64,ovn,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-e2e-azure-ovn-upgrade/1868862514507288576">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-e2e-azure-ovn-upgrade/1868862514507288576">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>azure,amd64,ovn,upgrade-minor,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-upgrade-from-stable-4.18-e2e-azure-ovn-upgrade/1868862736088174592">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="success">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/aggregator-periodic-ci-openshift-release-master-ci-4.19-upgrade-from-stable-4.18-e2e-azure-ovn-upgrade/1868862736088174592">success</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64,ovn,upgrade-micro,ha</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-machine-config-operator-4759-ci-4.19-e2e-gcp-ovn-upgrade/1869094212759195648">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-machine-config-operator-4759-ci-4.19-e2e-gcp-ovn-upgrade/1869094212759195648">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>gcp,amd64ovn,upgrade-minor,ha,realtime</td>
+    
+    <td class="empty" >
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-machine-config-operator-4759-ci-4.19-upgrade-from-stable-4.18-e2e-gcp-ovn-rt-upgrade/1869093794708721664">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-machine-config-operator-4759-ci-4.19-upgrade-from-stable-4.18-e2e-gcp-ovn-rt-upgrade/1869093794708721664">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+  <tr>
+    <td>metal-ipi,amd64,ovn,ha</td>
+    
+    <td class="failure" >
+      <a href="https://gcsweb-ci.apps.ci.l2s4.p1.openshiftapps.com/gcs/test-platform-results/logs/openshift-machine-config-operator-4759-nightly-4.19-e2e-metal-ipi-ovn-ipv6/1869093824916099072/artifacts/e2e-metal-ipi-ovn-ipv6/gather-must-gather/artifacts/install-status.txt">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+    
+    <td class="failure">
+      <a href="https://prow.ci.openshift.org/view/gs/test-platform-results/logs/openshift-machine-config-operator-4759-nightly-4.19-e2e-metal-ipi-ovn-ipv6/1869093824916099072">failure</a>
+    </td>
+    
+    
+    <td class="empty">
+      no data
+    </td>
+    
+  </tr>
+  
+</table>
+
+<p><small>Report generated on 2024-12-20 at 16:39 UTC</small></p>
+
+</body>
+</html>
+
